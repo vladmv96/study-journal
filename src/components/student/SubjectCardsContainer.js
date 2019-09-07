@@ -35,6 +35,34 @@ function SubjectCardsContainer({
             teacherName: 'Anastasiya',
             averageMark: '4.8'
         },
+        {
+            id: 1,
+            subjectTitle: "Math",
+            homeworkStatus: 'done',
+            teacherName: 'Anastasiya',
+            averageMark: '4.8'
+        },
+        {
+            id: 2,
+            subjectTitle: "Math",
+            homeworkStatus: 'done',
+            teacherName: 'Anastasiya',
+            averageMark: '4.8'
+        },
+        {
+            id: 3,
+            subjectTitle: "Math",
+            homeworkStatus: 'nodone',
+            teacherName: 'Anastasiya',
+            averageMark: '4.8'
+        },
+        {
+            id: 4,
+            subjectTitle: "Math",
+            homeworkStatus: 'done',
+            teacherName: 'Anastasiya',
+            averageMark: '4.8'
+        },
     ];
 
 
