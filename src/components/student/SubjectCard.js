@@ -22,7 +22,7 @@ function SubjectCard({
                 style={{
                     backgroundColor:getHomeworkStatusColor(homeworkStatus)
                 }}>
-                Домашнее задание: {homeworkStatus}</div>
+                Д/з: {homeworkStatus}</div>
             <h2 className="averageMark">{averageMark}</h2>
             <h5 className="teacherName">Учитель: {teacherName}</h5>
         </div>
