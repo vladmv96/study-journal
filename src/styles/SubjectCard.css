@@ -1,0 +1,50 @@
+.module-border-wrap {
+    max-width: 250px;
+    position: relative;
+    background: linear-gradient(to right, rgb(107, 228, 202), rgb(45, 143, 122));
+    padding: 7px;
+    border-radius: 15px;
+    margin-top: 10px;
+    margin-left:10px;
+}
+
+.subjectCard {
+    font-size: 1em;
+    max-width: 250px;
+    min-height: 90%;
+    color:rgb(45, 143, 122);
+    border-radius: 10px;
+    padding: 0.5em 1em;
+    background-color:rgb(228, 255, 249);
+    transition-duration: 0.2s;
+    cursor: pointer;
+    user-select: none;
+}
+
+.subjectCard:hover {
+    filter: opacity(0.95);
+}
+
+.subjectCard:active {
+    filter: none;
+}
+
+.subjectName {
+    font-size: 1.8em;
+    margin: 0;
+}
+
+.homeworkStatus {
+    margin-top: 5px;
+    font-weight: bold;
+    border-radius: 3px;
+    padding: 0.3em;
+}
+
+.teacherName {
+    margin-bottom: 0px;
+}
+
+.averageMark {
+    margin: 0.1em;
+}
