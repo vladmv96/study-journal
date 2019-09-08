@@ -1,16 +1,10 @@
 import React, { useState } from 'react';
 import MainPageHeader from '../MainPageHeader';
 import CardsContainer from '../CardsContainer';
-import SubjectPage from './SubjectPage';
-import HomeworksPage from './HomeworksPage';
-import { STUDENT_ROLE } from '../../sources/constants/roles';
-import {
-    CARDS_ROUTE,
-    MAIN_ROUTE,
-    HOMEWORKS_ROUTE
-} from '../../sources/constants/routes';
+import { TEACHER_ROLE } from '../../sources/constants/roles';
+import { CARDS_ROUTE, MAIN_ROUTE } from '../../sources/constants/routes';
 
-function StudentMainPage() {
+function TeacherMainPage() {
     const [currentPage, setCurrentPage] = useState(CARDS_ROUTE);
     const [cardId, setCardId] = useState(null);
 
@@ -20,23 +14,17 @@ function StudentMainPage() {
     }
 
     return (
-        <div className='studentMainPage'>
+        <div className='TeacherMainPage'>
             <MainPageHeader
                 setCurrentPage={setCurrentPage}
-                role={STUDENT_ROLE}
+                role={TEACHER_ROLE}
             />
             {currentPage === CARDS_ROUTE &&
                 <CardsContainer
                     handleCardClick={handleCardClick}
                  />}
-            {currentPage === MAIN_ROUTE &&
-            <SubjectPage
-                cardId={cardId}
-            />}
-            {currentPage === HOMEWORKS_ROUTE &&
-            <HomeworksPage />}
         </div>
     );
 }
 
-export default StudentMainPage;
+export default TeacherMainPage;
