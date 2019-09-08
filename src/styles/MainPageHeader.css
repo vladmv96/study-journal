@@ -1,0 +1,16 @@
+.mainPageHeader {
+    min-height: 70px;
+    border: 1px solid salmon;
+    display: flex;
+    position: relative;
+}
+
+.headerNavButton {
+    margin: 10px;
+    cursor: pointer;
+}
+
+.closeButton {
+    margin: 10px 10px 10px auto;
+    cursor: pointer;
+}

@@ -1,67 +1,60 @@
 import React from 'react';
-import '../../styles/SubjectCardsContainer.css';
-import SubjectCard from './SubjectCard';
+import '../styles/CardsContainer.css';
+import SubjectCard from './student/SubjectCard';
 
-function SubjectCardsContainer({
+function CardsContainer({
     handleCardClick
 }) {
 
     const subjects = [
         {
             id: 1,
-            subjectTitle: "Math",
+            subjectTitle: "Математика",
             homeworkStatus: 'done',
             teacherName: 'Anastasiya',
             averageMark: '4.8'
         },
         {
             id: 2,
-            subjectTitle: "Math",
+            subjectTitle: "Русский язык",
             homeworkStatus: 'done',
             teacherName: 'Anastasiya',
-            averageMark: '4.8'
+            averageMark: '4.6'
         },
         {
             id: 3,
-            subjectTitle: "Math",
+            subjectTitle: "Английский язык",
             homeworkStatus: 'nodone',
             teacherName: 'Anastasiya',
-            averageMark: '4.8'
+            averageMark: '3.7'
         },
         {
             id: 4,
-            subjectTitle: "Math",
+            subjectTitle: "Физика",
             homeworkStatus: 'done',
             teacherName: 'Anastasiya',
-            averageMark: '4.8'
+            averageMark: '4.9'
         },
         {
-            id: 1,
-            subjectTitle: "Math",
+            id: 5,
+            subjectTitle: "История",
             homeworkStatus: 'done',
             teacherName: 'Anastasiya',
-            averageMark: '4.8'
+            averageMark: ''
         },
         {
-            id: 2,
-            subjectTitle: "Math",
+            id: 6,
+            subjectTitle: "География",
             homeworkStatus: 'done',
             teacherName: 'Anastasiya',
-            averageMark: '4.8'
+            averageMark: '3.6'
         },
         {
-            id: 3,
-            subjectTitle: "Math",
+            id: 7,
+            subjectTitle: "Обществознание",
             homeworkStatus: 'nodone',
             teacherName: 'Anastasiya',
-            averageMark: '4.8'
-        },
-        {
-            id: 4,
-            subjectTitle: "Math",
-            homeworkStatus: 'done',
-            teacherName: 'Anastasiya',
-            averageMark: '4.8'
+            averageMark: '4.0'
         },
     ];
 
@@ -80,10 +73,10 @@ function SubjectCardsContainer({
         );
     }
     return (
-        <div className='subjectCardsContainer'>
+        <div className='cardsContainer'>
             {subjects.map(renderSubjectCard)}
         </div>
     );
 }
 
-export default SubjectCardsContainer;
+export default CardsContainer;

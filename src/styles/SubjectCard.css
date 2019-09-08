@@ -1,5 +1,6 @@
 .module-border-wrap {
     max-width: 300px;
+    min-height: 150px;
     position: relative;
     background: linear-gradient(to right, rgb(107, 228, 202), rgb(45, 143, 122));
     padding: 7px;
@@ -47,4 +48,5 @@
 
 .averageMark {
     margin: 0.1em;
+    height: 1em;
 }
