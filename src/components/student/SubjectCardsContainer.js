@@ -16,17 +16,8 @@ function SubjectCardsContainer({
         },
         {
             id: 2,
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream:src/components/student/SubjectCardsContainer.js
-            subjectTitle: "Math",
-=======
-            subjectTitle: 'Mathematik',
->>>>>>> Stashed changes
-            homeworkStatus: 'done',
-=======
             subjectTitle: "Русский язык",
             homeworkStatus: 'inprogress',
->>>>>>> Stashed changes:src/components/CardsContainer.js
             teacherName: 'Anastasiya',
             averageMark: '4.8'
         },

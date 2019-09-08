@@ -12,22 +12,6 @@ function SubjectCard({
 }) {
 
   return (
-<<<<<<< Updated upstream
-    <div className="module-border-wrap">
-        <div
-            className="subjectCard"
-            onClick={() => handleCardClick(id)}>
-            <h1 className="subjectName" >{subjectTitle}</h1>
-            <div 
-                className="homeworkStatus" 
-                style={{
-                    borderColor:getHomeworkStatusColor(homeworkStatus)
-                }}>
-                Д/з: {homeworkStatus}</div>
-            <h2 className="averageMark">{averageMark}</h2>
-            <h5 className="teacherName">Учитель: {teacherName}</h5>
-        </div>
-=======
     <div className='subject-section'>
       <div
         className='module-border-wrap'
@@ -49,7 +33,6 @@ function SubjectCard({
               <h5 className='teacherName'>Учитель: {teacherName}</h5>
           </div>
       </div>
->>>>>>> Stashed changes
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import StudentMainPageHeader from './StudentMainPageHeader';
+import MainPageHeader from './StudentMainPageHeader';
 import SubjectCardsContainer from './SubjectCardsContainer';
 import SubjectPage from './SubjectPage';
 
@@ -14,12 +14,8 @@ function StudentMainPage() {
 
     return (
         <div className='studentMainPage'>
-<<<<<<< Updated upstream
-            <StudentMainPageHeader
-=======
             <MainPageHeader
                 currentPage={currentPage}
->>>>>>> Stashed changes
                 setCurrentPage={setCurrentPage}
             />
             {currentPage === 'cards' &&
