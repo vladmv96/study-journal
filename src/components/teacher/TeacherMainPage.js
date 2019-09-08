@@ -16,12 +16,14 @@ function TeacherMainPage() {
     return (
         <div className='TeacherMainPage'>
             <MainPageHeader
+                currentPage={currentPage}
                 setCurrentPage={setCurrentPage}
                 role={TEACHER_ROLE}
             />
             {currentPage === CARDS_ROUTE &&
                 <CardsContainer
                     handleCardClick={handleCardClick}
+                    cardId={cardId}
                  />}
         </div>
     );

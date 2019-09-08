@@ -17,7 +17,7 @@ function CardsContainer({
         {
             id: 2,
             subjectTitle: "Русский язык",
-            homeworkStatus: 'done',
+            homeworkStatus: 'inprogress',
             teacherName: 'Anastasiya',
             averageMark: '4.6'
         },

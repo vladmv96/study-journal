@@ -22,6 +22,7 @@ function StudentMainPage() {
     return (
         <div className='studentMainPage'>
             <MainPageHeader
+                currentPage={currentPage}
                 setCurrentPage={setCurrentPage}
                 role={STUDENT_ROLE}
             />
