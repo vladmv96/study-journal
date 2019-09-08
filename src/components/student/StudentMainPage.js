@@ -14,7 +14,12 @@ function StudentMainPage() {
 
     return (
         <div className='studentMainPage'>
+<<<<<<< Updated upstream
             <StudentMainPageHeader
+=======
+            <MainPageHeader
+                currentPage={currentPage}
+>>>>>>> Stashed changes
                 setCurrentPage={setCurrentPage}
             />
             {currentPage === 'cards' &&
