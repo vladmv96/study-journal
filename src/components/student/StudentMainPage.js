@@ -1,14 +1,21 @@
 import React, { useState } from 'react';
-import MainPageHeader from './StudentMainPageHeader';
-import SubjectCardsContainer from './SubjectCardsContainer';
+import MainPageHeader from '../MainPageHeader';
+import CardsContainer from '../CardsContainer';
 import SubjectPage from './SubjectPage';
+import HomeworksPage from './HomeworksPage';
+import { STUDENT_ROLE } from '../../sources/constants/roles';
+import {
+    CARDS_ROUTE,
+    MAIN_ROUTE,
+    HOMEWORKS_ROUTE
+} from '../../sources/constants/routes';
 
 function StudentMainPage() {
-    const [currentPage, setCurrentPage] = useState('cards');
+    const [currentPage, setCurrentPage] = useState(CARDS_ROUTE);
     const [cardId, setCardId] = useState(null);
 
     function handleCardClick(id) {
-        setCurrentPage('main');
+        setCurrentPage(MAIN_ROUTE);
         setCardId(id);
     }
 
@@ -17,15 +24,18 @@ function StudentMainPage() {
             <MainPageHeader
                 currentPage={currentPage}
                 setCurrentPage={setCurrentPage}
+                role={STUDENT_ROLE}
             />
-            {currentPage === 'cards' &&
-                <SubjectCardsContainer
+            {currentPage === CARDS_ROUTE &&
+                <CardsContainer
                     handleCardClick={handleCardClick}
                  />}
-            {currentPage === 'main' &&
+            {currentPage === MAIN_ROUTE &&
             <SubjectPage
                 cardId={cardId}
             />}
+            {currentPage === HOMEWORKS_ROUTE &&
+            <HomeworksPage />}
         </div>
     );
 }

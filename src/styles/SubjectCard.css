@@ -7,40 +7,25 @@
 }
 
 .module-border-wrap {
-<<<<<<< Updated upstream
-    max-width: 300px;
-=======
     max-width: 310px;
     height: 180px;
->>>>>>> Stashed changes
+    min-height: 150px;
     position: relative;
     background: linear-gradient(45deg, #F1F9D3, #97F7F5);
     padding: 7px;
     border-radius: 15px;
-<<<<<<< Updated upstream
     
-=======
-    margin: 0 10px;
-    margin-top: 10px;
->>>>>>> Stashed changes
 }
 
 .subjectCard {
     font-family:  'Comfortaa', cursive;
     font-size: 1em;
-<<<<<<< Updated upstream
     min-width: 275px;
     display: grid;
     grid-template-columns: 1;
     grid-template-rows: repeat(auto-fill, minmax(40px, 1fr));
     height: 90%;
     color:rgb(45, 192, 172);
-=======
-    min-width: 250px;
-    max-width: 250px;
-    max-height: 150px;
-    color:rgb(45, 143, 122);
->>>>>>> Stashed changes
     border-radius: 10px;
     padding: 0.5em 1em;
     background-color:rgba(255, 255, 255, 0.9);
@@ -69,13 +54,8 @@
 }
 
 .averageMark {
-<<<<<<< Updated upstream
-    margin: 0.1em;
-}
-=======
     margin-top: auto;
     margin-bottom: auto;
-    height: 1em;
 }
 
 .teacherName {
@@ -84,4 +64,3 @@
     margin-right: 5px;
     margin-left: auto;
 }
->>>>>>> Stashed changes
