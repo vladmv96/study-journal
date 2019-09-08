@@ -4,7 +4,10 @@ function HomeworksPage() {
 
     return (
         <div className='homeworksPage'>
-            <h2>Домашние задания</h2>
+            <div className='homeworkPageContainer'>
+                <h2>Домашние задания</h2>
+            </div>
+            
         </div>
     );
 }

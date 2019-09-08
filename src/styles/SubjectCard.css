@@ -35,7 +35,7 @@
 }
 
 .subjectCard:hover {
-    filter: opacity(0.9);
+    background-color:rgba(255, 255, 255, 0.7);
 }
 
 .subjectCard:active {
