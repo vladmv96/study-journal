@@ -1,5 +1,5 @@
 import React from 'react';
-import Homework from './Homework';
+import HomeworksPage from './HomeworksPage';
 import '../../styles/SubjectPage.css';
 
 function SubjectPage({
@@ -10,7 +10,7 @@ function SubjectPage({
         <div className='subjectPage'>
             <h1>Математика</h1>
             <h2>Id: {cardId}</h2>
-            <Homework />
+            <HomeworksPage />
             <h2>Успеваемость</h2>
         </div>
     );

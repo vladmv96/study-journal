@@ -1,0 +1,21 @@
+.homework-page {
+    border: 1px solid black;
+}
+
+.homework-page-title {
+    width: 50%;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 25%;
+    margin-bottom: 2%;
+}
+
+.homework-cards-container {
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: repeat( 40px);
+    grid-row-gap: 1.5vh;
+    margin: auto;
+    width: 70vw;
+}

@@ -1,0 +1,36 @@
+.homework-card {
+    margin: auto;
+    display: grid;
+    grid-template-rows: 1;
+    grid-template-columns: minmax(100px, 1fr) repeat(auto-fit, 90px);
+    border: 1px solid rgba(195, 248, 228,0.3);
+    border-radius: 8px;
+    width: 100%;
+    min-height: 40px;
+    cursor: pointer;
+    background: linear-gradient(90deg, rgba(241,249,211,0.1), rgba(151,247,245,0.1));
+}
+.homework-card:hover {
+    background: linear-gradient(90deg, rgba(241,249,211,0.2), rgba(151,247,245,0.2));
+}
+
+.homework-card-tasks {
+    margin-left: 5px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.homework-card-deadline-date {
+    min-width: 70px;
+    font-size: 0.8em;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+}
+
+.homework-card-status {
+    min-width: 70px;
+    font-size: 0.7em;
+    margin-top: auto;
+    margin-bottom: auto;
+}

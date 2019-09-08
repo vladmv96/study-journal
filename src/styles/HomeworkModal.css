@@ -1,0 +1,9 @@
+.homework-modal-container {
+    background: white;
+    width: 50%;
+    height: 50%;
+    border: 1px solid purple;
+    position: absolute;
+    left: 25%;
+    top: 15%;
+}
