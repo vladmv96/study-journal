@@ -15,6 +15,15 @@
     padding: 7px;
     border-radius: 15px;
     
+    transition-duration: 0.4s;
+}
+
+.module-border-wrap:hover {
+    transform: scale(1.04);
+}
+
+.module-border-wrap:active {
+    transform: scale(0.95);
 }
 
 .subjectCard {

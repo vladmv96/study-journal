@@ -13,35 +13,35 @@ function HomeworksPage() {
             id: 0,
             tasks: '113',
             deadlineDate: '01.09.2020',
-            cardStatus: 'В процессе'
+            cardStatus: 'inprogress'
         },
         {   id: 1,
             tasks: '113 34325 34 342 ',
             deadlineDate: '09.09.2019',
-            cardStatus: 'Сделано'
+            cardStatus: 'done'
         },
         {
             id: 2,
             tasks: '113',
             deadlineDate: '01.09.2020',
-            cardStatus: 'В процессе'
+            cardStatus: 'nodone'
         },
         {
             id: 3,
             tasks: '113',
             deadlineDate: '01.09.2020',
-            cardStatus: 'В процессе'
+            cardStatus: 'inprogress'
         },
         {   id: 4,
             tasks: '113 34325 34 342 ',
             deadlineDate: '09.09.2019',
-            cardStatus: 'Сделано'
+            cardStatus: 'done'
         },
         {
             id: 5,
             tasks: '113',
             deadlineDate: '01.09.2020',
-            cardStatus: 'В процессе'
+            cardStatus: 'inprogress'
         }
     ]
 
@@ -77,7 +77,11 @@ function HomeworksPage() {
                 </div>
             </div>
 
-            {homeworkModalIsOpen && <HomeworkModal currentHomeworkId={currentHomeworkId}/>}
+            {homeworkModalIsOpen && <HomeworkModal 
+            currentHomeworkId={currentHomeworkId} 
+            toggleHomeworkCardModal={toggleHomeworkCardModal}
+            />}
+            
         </div>
     );
 }
