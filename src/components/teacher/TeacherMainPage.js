@@ -6,11 +6,9 @@ import { CARDS_ROUTE, MAIN_ROUTE } from '../../sources/constants/routes';
 
 function TeacherMainPage() {
     const [currentPage, setCurrentPage] = useState(CARDS_ROUTE);
-    const [cardId, setCardId] = useState(null);
 
     function handleCardClick(id) {
         setCurrentPage(MAIN_ROUTE);
-        setCardId(id);
     }
 
     return (
@@ -23,7 +21,6 @@ function TeacherMainPage() {
             {currentPage === CARDS_ROUTE &&
                 <CardsContainer
                     handleCardClick={handleCardClick}
-                    cardId={cardId}
                  />}
         </div>
     );
