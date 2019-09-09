@@ -1,0 +1,41 @@
+.homework-page {
+    
+    border: 1px solid black;
+}
+
+.homework-page-title {
+    
+    animation: 0.2s ease-in 0s 1 containerApear;
+    width: 50%;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 25%;
+    margin-bottom: 2%;
+}
+
+.homework-cards-container {
+    
+    animation: 0.2s ease-in 0s 1 containerApear;
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: repeat( 40px);
+    grid-row-gap: 1.5vh;
+    margin: auto;
+    width: 70vw;
+}
+
+@media screen and (max-width: 500px) {
+    .homework-cards-container {
+        width: 90vw;
+    }
+}
+
+@keyframes containerApear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

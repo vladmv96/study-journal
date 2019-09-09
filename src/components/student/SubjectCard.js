@@ -26,7 +26,7 @@ function SubjectCard({
               <div 
                   className='homeworkStatus' 
                   style={{
-                      color: getHomeworkStatusColor(homeworkStatus)
+                      color: `rgb(${getHomeworkStatusColor(homeworkStatus)})`
                   }}>
                   Д/з: {homeworkStatus}</div>
               <h2 className='averageMark'>{averageMark}</h2>

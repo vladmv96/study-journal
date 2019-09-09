@@ -1,13 +1,13 @@
 function getHomeworkStatusColor(homeworkStatus) {
     switch (homeworkStatus) {
         case 'nodone':
-            return 'rgba(250, 207, 207, 1)';
+            return '250, 207, 207';
         case 'done':
-            return 'rgba(143, 239, 205, 1)';
+            return '151,247,168';
         case 'inprogress':
-            return 'rgba(251, 227, 184, 1)' ;
+            return '251, 227, 184' ;
         default:
-            return 'rgb(165, 254, 230)';
+            return '165, 254, 230';
         
     }
 }

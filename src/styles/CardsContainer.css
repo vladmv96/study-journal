@@ -1,8 +1,18 @@
 .cardsContainer {
+    animation: 0.2s ease-in 0s 1 containerApear;
     margin: auto;
     width: 90vw;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
     grid-auto-rows: 200px;
     grid-gap: 15px;
+}
+
+@keyframes containerApear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }

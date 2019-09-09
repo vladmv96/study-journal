@@ -11,7 +11,7 @@ import {
 } from '../../sources/constants/routes';
 
 function StudentMainPage() {
-    const [currentPage, setCurrentPage] = useState(CARDS_ROUTE);
+    const [currentPage, setCurrentPage] = useState(HOMEWORKS_ROUTE);
     const [cardId, setCardId] = useState(null);
 
     function handleCardClick(id) {

@@ -1,0 +1,58 @@
+.homework-modal-container-back {
+    animation: 1s ease-out 0s 1 backgroundChanges;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    transition-duration: 1s;
+    background: rgba(255,255,255,0.7);
+}
+
+.homework-modal-container {
+    animation: 0.5s ease-out 0s 1 containerApear;
+    background: white;
+    transition-duration: 1s;
+    width: 50%;
+    height: 50%;
+    border: 1px solid purple;
+    position: absolute;
+    left: 25%;
+    top: 15%;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+@keyframes backgroundChanges {
+    0% {
+        background: rgba(255,255,255,0);
+    }
+    100%{
+        background: rgba(255,255,255,0.7);
+    }
+}
+
+@keyframes containerApear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .homework-modal-container {
+        width: 90%;
+        height: 90%;
+        position: absolute;
+        top: 5%;
+        left: 5%;
+    }
+}
