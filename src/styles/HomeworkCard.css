@@ -11,6 +11,9 @@
     background: linear-gradient(90deg, rgba(241,249,211,0.4), rgba(151,247,245,0.1));
     transition: 0.5s;
 }
+
+
+
 .homework-card:hover {
     transition: 0.5s;
     transform: scale(1.007);

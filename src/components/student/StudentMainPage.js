@@ -51,10 +51,10 @@ function StudentMainPage() {
                 role={STUDENT_ROLE}
             />
             {currentPage === CARDS_ROUTE &&
-                <CardsContainer
-                    handleCardClick={handleSubjectCardClick}
-                    subjects={subjectsList}
-                 />}
+            <CardsContainer
+                handleCardClick={handleSubjectCardClick}
+                subjects={subjectsList}
+            />}
             {currentPage === MAIN_ROUTE &&
             <SubjectPage
                 subjectId={subjectId}

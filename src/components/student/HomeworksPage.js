@@ -48,6 +48,8 @@ function HomeworksPage({
                 <HomeworkModal 
                     currentHomeworkId={currentHomeworkId} 
                     toggleHomeworkCardModal={toggleHomeworkCardModal}
+                    tasks={homeworksList[subjectId][currentHomeworkId].tasks}
+                    deadlineDate={homeworksList[subjectId][currentHomeworkId].deadlineDate}
                 />}
             
         </div>
