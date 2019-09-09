@@ -1,6 +1,5 @@
 import React from 'react';
 import '../styles/HomeworkCard.css';
-import {getHomeworkStatusColor} from '../sources/utils';
 
 function HomeworkCard({
     tasks,

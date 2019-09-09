@@ -3,14 +3,18 @@ import HomeworksPage from './HomeworksPage';
 import '../../styles/SubjectPage.css';
 
 function SubjectPage({
-    cardId
+    subjectId,
+    homeworksList
 }) {
 
     return (
         <div className='subjectPage'>
             <h1>Математика</h1>
-            <h2>Id: {cardId}</h2>
-            <HomeworksPage />
+            <h2>Id: {subjectId}</h2>
+            <HomeworksPage
+                subjectId={subjectId}
+                homeworksList={homeworksList}
+                />
             <h2>Успеваемость</h2>
         </div>
     );

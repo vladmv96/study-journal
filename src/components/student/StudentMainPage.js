@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import MainPageHeader from '../MainPageHeader';
 import CardsContainer from '../CardsContainer';
 import SubjectPage from './SubjectPage';
@@ -9,15 +9,39 @@ import {
     MAIN_ROUTE,
     HOMEWORKS_ROUTE
 } from '../../sources/constants/routes';
+import { getSubjectsFetch, getHomeworksFetch } from '../../sources/API';
+import { testSubjects, testHomeworks } from '../../sources/test_data';
 
 function StudentMainPage() {
     const [currentPage, setCurrentPage] = useState(HOMEWORKS_ROUTE);
-    const [cardId, setCardId] = useState(null);
+    const [subjectId, setSubjectId] = useState(null);
+    const [subjectsList, setSubjectsList] = useState(testSubjects);
+    const [homeworksList, setHomeworksList] = useState(testHomeworks);
 
-    function handleCardClick(id) {
+    useEffect(() => {
+        getSubjectsFetch(1).then((data) => {
+            setSubjectsList(data);
+        });
+        getHomeworksFetch(1).then((data) => {
+            setHomeworksList(data);
+        })
+    }, [])
+
+    function handleSubjectCardClick(id) {
         setCurrentPage(MAIN_ROUTE);
-        setCardId(id);
+        setSubjectId(id);
     }
+
+    function renderHomeworksPage(item) {
+        return (
+            <HomeworksPage
+                subjectId={item.id}
+                subjectTitle={item.subjectTitle}
+                homeworksList={homeworksList}
+            />
+        )
+    }
+
 
     return (
         <div className='studentMainPage'>
@@ -28,14 +52,20 @@ function StudentMainPage() {
             />
             {currentPage === CARDS_ROUTE &&
                 <CardsContainer
-                    handleCardClick={handleCardClick}
+                    handleCardClick={handleSubjectCardClick}
+                    subjects={subjectsList}
                  />}
             {currentPage === MAIN_ROUTE &&
             <SubjectPage
-                cardId={cardId}
+                subjectId={subjectId}
+                homeworksList={homeworksList}
             />}
             {currentPage === HOMEWORKS_ROUTE &&
-            <HomeworksPage />}
+                <div>
+                    <div className='homework-page-title'>Домашние задания</div>
+                    {subjectsList.map(renderHomeworksPage)}
+                </div>
+                }
         </div>
     );
 }
