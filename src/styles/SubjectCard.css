@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap');
+
 
 .subject-section {
     display: flex;
@@ -14,7 +14,7 @@
     background: linear-gradient(45deg, #F1F9D3, #97F7F5);
     padding: 7px;
     border-radius: 15px;
-    
+    box-shadow: 11px 10px 16px -17px rgba(136,242,212,1);
     transition-duration: 0.4s;
 }
 
@@ -27,7 +27,6 @@
 }
 
 .subjectCard {
-    font-family:  'Comfortaa', cursive;
     font-size: 1em;
     min-width: 275px;
     display: grid;

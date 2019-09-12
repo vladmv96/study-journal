@@ -36,11 +36,14 @@ function StudentMainPage() {
         return (
             <HomeworksPage
                 subjectId={item.id}
+                teacherName={item.teacherName}
                 subjectTitle={item.subjectTitle}
-                homeworksList={homeworksList}
+                homeworksList={homeworksList[item.id]}
             />
         )
     }
+
+    console.log(subjectsList, subjectId)
 
 
     return (
@@ -58,11 +61,12 @@ function StudentMainPage() {
             {currentPage === MAIN_ROUTE &&
             <SubjectPage
                 subjectId={subjectId}
+                subject={subjectsList[subjectId - 1]}
                 homeworksList={homeworksList}
             />}
             {currentPage === HOMEWORKS_ROUTE &&
                 <div>
-                    <div className='homework-page-title'>Домашние задания</div>
+                    <div className='homework-page-title'>Домашнее задание</div>
                     {subjectsList.map(renderHomeworksPage)}
                 </div>
                 }

@@ -4,7 +4,8 @@ import '../../styles/SubjectPage.css';
 
 function SubjectPage({
     subjectId,
-    homeworksList
+    homeworksList,
+    subject
 }) {
 
     return (
@@ -13,7 +14,8 @@ function SubjectPage({
             <h2>Id: {subjectId}</h2>
             <HomeworksPage
                 subjectId={subjectId}
-                homeworksList={homeworksList}
+                homeworksList={homeworksList[subjectId]}
+                teacherName={subject.teacherName}
                 />
             <h2>Успеваемость</h2>
         </div>

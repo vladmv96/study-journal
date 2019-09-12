@@ -21,7 +21,7 @@ function StudentMainPageHeader({
                 {role === STUDENT_ROLE &&
                 <button className={`headerNavButton ${(currentPage===HOMEWORKS_ROUTE && 'active-button')}`}  onClick={() => {
                     setCurrentPage(HOMEWORKS_ROUTE)}
-                }>Домашние задания</button>
+                }>Домашнее задание</button>
                 }
                 <button className='closeButton'>Выход</button>
             </div>

@@ -6,7 +6,8 @@ import HomeworkModal from './HomeworkModal';
 function HomeworksPage({
     subjectId,
     homeworksList,
-    subjectTitle
+    subjectTitle,
+    teacherName
 }) {
 
     const [homeworkModalIsOpen, setHomeworkModalIsOpen] = useState(false);
@@ -40,7 +41,7 @@ function HomeworksPage({
             <div>
                 <div className='homework-page-title'>{subjectTitle || 'Домашнее задание'}</div>
                 <div className='homework-cards-container'>
-                    {homeworksList && homeworksList[subjectId] && homeworksList[subjectId].map(renderHomeworkCard)}
+                    {homeworksList && homeworksList.map(renderHomeworkCard)}
                 </div>
             </div>
 
@@ -48,8 +49,9 @@ function HomeworksPage({
                 <HomeworkModal 
                     currentHomeworkId={currentHomeworkId} 
                     toggleHomeworkCardModal={toggleHomeworkCardModal}
-                    tasks={homeworksList[subjectId][currentHomeworkId].tasks}
-                    deadlineDate={homeworksList[subjectId][currentHomeworkId].deadlineDate}
+                    tasks={homeworksList[currentHomeworkId].tasks}
+                    deadlineDate={homeworksList[currentHomeworkId].deadlineDate}
+                    teacherName={teacherName}
                 />}
             
         </div>
