@@ -14,7 +14,6 @@
 }
 
 .homework-cards-container {
-    
     animation: 0.2s ease-in 0s 1 containerApear;
     display: grid;
     grid-template-columns: 1;

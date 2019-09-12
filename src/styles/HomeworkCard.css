@@ -1,3 +1,11 @@
+.homework-card-border {
+    padding: 7px;
+    border-radius: 15px;
+    box-shadow: 11px 10px 16px -17px rgb(58, 105, 92);
+    transition: 0.5s;
+    width: 98%;
+}
+
 .homework-card {
     color: rgb(31, 83, 68);
     margin: auto;
@@ -8,23 +16,19 @@
     width: 100%;
     min-height: 40px;
     cursor: pointer;
-    background: linear-gradient(90deg, rgba(241,249,211,0.4), rgba(151,247,245,0.1));
+    background: white;
     transition: 0.5s;
 }
 
-
+.homework-card-border:hover {
+    width: 99%;
+    margin-left: -0.5%;
+}
 
 .homework-card:hover {
-    transition: 0.5s;
-    transform: scale(1.007);
-    filter: brightness(0.93)
+    background-color:rgba(255, 255, 255, 0.75);
 }
 
-
-.homework-card:active {
-    transition: 0.4s;
-    transform: scale(1);
-}
 
 .homework-card-tasks {
     margin-left: 5px;

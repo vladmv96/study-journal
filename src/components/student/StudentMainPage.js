@@ -11,6 +11,7 @@ import {
 } from '../../sources/constants/routes';
 import { getSubjectsFetch, getHomeworksFetch } from '../../sources/API';
 import { testSubjects, testHomeworks } from '../../sources/test_data';
+import '../../styles/StudentMainPage.css';
 
 function StudentMainPage() {
     const [currentPage, setCurrentPage] = useState(HOMEWORKS_ROUTE);
@@ -66,7 +67,6 @@ function StudentMainPage() {
             />}
             {currentPage === HOMEWORKS_ROUTE &&
                 <div>
-                    <div className='homework-page-title'>Домашнее задание</div>
                     {subjectsList.map(renderHomeworksPage)}
                 </div>
                 }
