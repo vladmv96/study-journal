@@ -33,8 +33,12 @@
     text-shadow: 2px 1px 5px rgba(66,66,66,0.46);
 }
 
+.main-page-header .header-nav-button:active {
+    transform: scale(0.95);
+}
+
 .main-page-header .active-button:hover {
-    border-radius: 5px 5px 0 0;
+    text-shadow: none;
 }
 
 .main-page-header .header-nav-button:active {
@@ -45,7 +49,7 @@
     cursor: pointer;
 }
 
-.close-button {
+.main-page-header .close-button {
     grid-column-start: -1;
     grid-column-end: -2;
     cursor: pointer;

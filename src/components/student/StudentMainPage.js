@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import MainPageHeader from '../MainPageHeader';
 import CardsContainer from '../CardsContainer';
 import SubjectPage from './SubjectPage';
-import HomeworksContainer from './HomeworksContainer';
+import HomeworkContainer from './HomeworkContainer';
 import { STUDENT_ROLE } from 'sources/constants/roles';
 import {
     CARDS_ROUTE,
@@ -33,9 +33,9 @@ function StudentMainPage() {
         setSubjectId(id);
     }
 
-    function renderHomeworksContainer(item) {
+    function renderHomeworkContainer(item) {
         return (
-            <HomeworksContainer
+            <HomeworkContainer
                 subjectId={item.id}
                 teacherName={item.teacherName}
                 subjectTitle={item.subjectTitle}
@@ -64,7 +64,7 @@ function StudentMainPage() {
             />}
             {currentPage === HOMEWORKS_ROUTE &&
                 <div>
-                    {subjectsList.map(renderHomeworksContainer)}
+                    {subjectsList.map(renderHomeworkContainer)}
                 </div>
                 }
         </div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import {getSubjectCardColor} from 'sources/utils';
 import 'styles/HomeworkCard.css';
+import { statusesDisplay } from 'sources/constants/statusesDisplay';
 
 function HomeworkCard({
     tasks,
@@ -26,7 +27,7 @@ function HomeworkCard({
                     {deadlineDate}
                 </div>
                 <div className='homework-card-status'>
-                    {cardStatus}
+                    {statusesDisplay[cardStatus] || cardStatus}
                 </div>
             </div>
             

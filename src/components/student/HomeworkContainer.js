@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import HomeworkCard from '../HomeworkCard.js';
-import 'styles/student/HomeworksContainer.css';
+import 'styles/student/HomeworkContainer.css';
 import HomeworkModal from './HomeworkModal';
 
-function HomeworksContainer({
+function HomeworkContainer({
     subjectId,
     homeworksList,
     subjectTitle,
@@ -36,11 +36,11 @@ function HomeworksContainer({
     };
     return (
         <div 
-            className='homeworks-page'
+            className='homework-container'
         >
             <div>
-                <div className='homework-page-title'>{subjectTitle || 'Домашнее задание'}</div>
-                <div className='homework-cards-container'>
+                <div className='homework-container-title'>{subjectTitle || 'Домашнее задание'}</div>
+                <div className='homework-container-cards'>
                     {homeworksList && homeworksList.map(renderHomeworkCard)}
                 </div>
             </div>
@@ -52,10 +52,11 @@ function HomeworksContainer({
                     tasks={homeworksList[currentHomeworkId].tasks}
                     deadlineDate={homeworksList[currentHomeworkId].deadlineDate}
                     teacherName={teacherName}
+                    subjectTitle={subjectTitle}
                 />}
             
         </div>
     );
 }
 
-export default HomeworksContainer;
+export default HomeworkContainer;

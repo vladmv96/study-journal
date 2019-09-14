@@ -1,6 +1,7 @@
 import React from 'react';
 import 'styles/student/SubjectCard.css';
 import {getHomeworkStatusColor, getSubjectCardColor} from 'sources/utils';
+import { statusesDisplay } from 'sources/constants/statusesDisplay';
 
 function SubjectCard({
     subjectTitle,
@@ -28,7 +29,7 @@ function SubjectCard({
                   style={{
                       color: `rgb(${getHomeworkStatusColor(homeworkStatus)})`
                   }}>
-                  Д/з: {homeworkStatus}</div>
+                  Д/з: {statusesDisplay[homeworkStatus] || homeworkStatus}</div>
               <h2 className='average-mark'>{averageMark}</h2>
               <h5 className='teacher-name'>Учитель: {teacherName}</h5>
           </div>
