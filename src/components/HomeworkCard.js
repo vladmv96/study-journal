@@ -6,7 +6,7 @@ import { statusesDisplay } from 'sources/constants/statusesDisplay';
 function HomeworkCard({
     tasks,
     deadlineDate,
-    cardStatus,
+    homeworkStatus,
     handleHomeworkCardClick,
     id
 }) {
@@ -27,7 +27,7 @@ function HomeworkCard({
                     {deadlineDate}
                 </div>
                 <div className='homework-card-status'>
-                    {statusesDisplay[cardStatus] || cardStatus}
+                    {statusesDisplay[homeworkStatus] || homeworkStatus}
                 </div>
             </div>
             

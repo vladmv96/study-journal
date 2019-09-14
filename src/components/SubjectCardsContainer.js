@@ -1,8 +1,8 @@
 import React from 'react';
-import 'styles/CardsContainer.css';
+import 'styles/SubjectCardsContainer.css';
 import SubjectCard from './student/SubjectCard';
 
-function CardsContainer({
+function SubjectCardsContainer({
     handleCardClick,
     subjects
 }) {
@@ -27,4 +27,4 @@ function CardsContainer({
     );
 }
 
-export default CardsContainer;
+export default SubjectCardsContainer;

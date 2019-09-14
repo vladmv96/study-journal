@@ -29,7 +29,7 @@ function HomeworkContainer({
                 id={item.id}
                 tasks={item.tasks}
                 deadlineDate={item.deadlineDate}
-                cardStatus={item.cardStatus}
+                homeworkStatus={item.homeworkStatus}
                 handleHomeworkCardClick={handleHomeworkCardClick}
             />
         )
@@ -45,7 +45,7 @@ function HomeworkContainer({
                 </div>
             </div>
 
-            {homeworkModalIsOpen &&
+            { homeworkModalIsOpen &&
                 <HomeworkModal 
                     currentHomeworkId={currentHomeworkId} 
                     toggleHomeworkCardModal={toggleHomeworkCardModal}
@@ -53,6 +53,7 @@ function HomeworkContainer({
                     deadlineDate={homeworksList[currentHomeworkId].deadlineDate}
                     teacherName={teacherName}
                     subjectTitle={subjectTitle}
+                    homeworkStatus={homeworksList[currentHomeworkId].homeworkStatus}
                 />}
             
         </div>

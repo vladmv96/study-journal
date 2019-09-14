@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import MainPageHeader from '../MainPageHeader';
-import CardsContainer from '../CardsContainer';
+import SubjectCardsContainer from '../SubjectCardsContainer';
 import SubjectPage from './SubjectPage';
-import HomeworkContainer from './HomeworkContainer';
+import HomeworkPage from './HomeworkPage';
 import { STUDENT_ROLE } from 'sources/constants/roles';
 import {
     CARDS_ROUTE,
@@ -33,16 +33,7 @@ function StudentMainPage() {
         setSubjectId(id);
     }
 
-    function renderHomeworkContainer(item) {
-        return (
-            <HomeworkContainer
-                subjectId={item.id}
-                teacherName={item.teacherName}
-                subjectTitle={item.subjectTitle}
-                homeworksList={homeworksList[item.id]}
-            />
-        )
-    }
+    
 
     return (
         <div className='student-main-page'>
@@ -52,7 +43,7 @@ function StudentMainPage() {
                 role={STUDENT_ROLE}
             />
             {currentPage === CARDS_ROUTE &&
-            <CardsContainer
+            <SubjectCardsContainer
                 handleCardClick={handleSubjectCardClick}
                 subjects={subjectsList}
             />}
@@ -63,10 +54,11 @@ function StudentMainPage() {
                 homeworksList={homeworksList}
             />}
             {currentPage === HOMEWORKS_ROUTE &&
-                <div>
-                    {subjectsList.map(renderHomeworkContainer)}
-                </div>
-                }
+            <HomeworkPage 
+                subjectsList={subjectsList}
+                homeworksList={homeworksList}
+            />
+            }
         </div>
     );
 }

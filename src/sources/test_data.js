@@ -57,35 +57,35 @@ const testHomeworks = {
                 "id": 0,
                 "tasks": "113",
                 "deadlineDate": "01.09.2020",
-                "cardStatus": "inprogress"
+                "homeworkStatus": "inprogress"
             },
             {   "id": 1,
                 "tasks": "113 34325 34 342 ",
                 "deadlineDate": "09.09.2019",
-                "cardStatus": "done"
+                "homeworkStatus": "done"
             },
             {
                 "id": 2,
                 "tasks": "113",
                 "deadlineDate": "01.09.2020",
-                "cardStatus": "nodone"
+                "homeworkStatus": "nodone"
             },
             {
                 "id": 3,
                 "tasks": "113",
                 "deadlineDate": "01.09.2020",
-                "cardStatus": "inprogress"
+                "homeworkStatus": "inprogress"
             },
             {   "id": 4,
                 "tasks": "113 34325 34 342 ",
                 "deadlineDate": "09.09.2019",
-                "cardStatus": "done"
+                "homeworkStatus": "done"
             },
             {
                 "id": 5,
                 "tasks": "113",
                 "deadlineDate": "01.09.2020",
-                "cardStatus": "inprogress"
+                "homeworkStatus": "inprogress"
             }
         ],
         "2": [
@@ -93,18 +93,18 @@ const testHomeworks = {
                 "id": 0,
                 "tasks": "234",
                 "deadlineDate": "01.09.2020",
-                "cardStatus": "inprogress"
+                "homeworkStatus": "inprogress"
             },
             {   "id": 1,
                 "tasks": "1234432 ",
                 "deadlineDate": "09.09.2019",
-                "cardStatus": "done"
+                "homeworkStatus": "done"
             },
             {
                 "id": 2,
                 "tasks": "1254352",
                 "deadlineDate": "01.09.2020",
-                "cardStatus": "nodone"
+                "homeworkStatus": "nodone"
             }
         ]
 }
