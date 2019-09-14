@@ -3,18 +3,16 @@ import HomeworkContainer from '../homework/HomeworkContainer';
 
 function SubjectPage({
     subjectId,
-    homeworksList,
     subject
 }) {
 
     return (
         <div className='subjectPage'>
-            <h1>{subject.title}</h1>
+            <h1>{subject.subjectTitle}</h1>
             <h2>Id: {subjectId}</h2>
-            {homeworksList && homeworksList[subjectId] &&
+            {subject.homework &&
                 <HomeworkContainer
-                    subjectId={subjectId}
-                    subjectHomeworksList={homeworksList[subjectId]}
+                    subjectHomeworksList={subject.homework}
                     teacherName={subject.teacherName}
                 />
             }

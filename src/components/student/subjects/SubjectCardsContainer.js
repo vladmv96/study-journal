@@ -4,7 +4,7 @@ import SubjectCard from './SubjectCard';
 
 function SubjectCardsContainer({
     handleCardClick,
-    subjects
+    subjectsList
 }) {
 
     function renderSubjectCard(item) {
@@ -12,7 +12,7 @@ function SubjectCardsContainer({
             <SubjectCard
                 key={item.id}
                 id={item.id}
-                title={item.title}
+                subjectTitle={item.subjectTitle}
                 homeworkStatus={item.homeworkStatus}
                 teacherName={item.teacherName}
                 averageMark={item.averageMark}
@@ -22,7 +22,7 @@ function SubjectCardsContainer({
     }
     return (
         <div className='cards-container'>
-            {subjects && subjects.map(renderSubjectCard)}
+            {subjectsList && subjectsList.map(renderSubjectCard)}
         </div>
     );
 }

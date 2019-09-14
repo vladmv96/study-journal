@@ -3,23 +3,23 @@ import 'styles/student/HomeworkPage.css';
 import HomeworkContainer from './HomeworkContainer';
 
 function HomeworkPage ({
-    subjectsList,
-    homeworksList
+    subjectsList
 }) {
     function renderHomeworkContainer(item) {
         return (
             <HomeworkContainer
+                key={item.id} 
                 subjectId={item.id}
                 teacherName={item.teacherName}
-                title={item.title}
-                subjectHomeworksList={homeworksList[item.id]}
+                subjectTitle={item.subjectTitle}
+                subjectHomeworksList={item.homework}
             />
         )
     }
 
     return (
         <div>
-            {subjectsList.map(renderHomeworkContainer)}
+            {subjectsList && subjectsList.map(renderHomeworkContainer)}
         </div>
     )
 }

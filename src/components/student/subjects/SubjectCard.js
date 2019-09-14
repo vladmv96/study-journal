@@ -4,7 +4,7 @@ import {getHomeworkStatusColor, getSubjectCardColor} from 'sources/utils';
 import { statusesDisplay } from 'sources/constants/statuses';
 
 function SubjectCard({
-    title,
+    subjectTitle,
     homeworkStatus,
     teacherName,
     averageMark,
@@ -17,13 +17,13 @@ function SubjectCard({
       <div
         className='module-border-wrap'
         style={{
-          background: getSubjectCardColor(title)
+          background: getSubjectCardColor(subjectTitle)
         }}>
           <div
             className='subject-card'
             onClick={() => handleCardClick(id)}
           >
-              <h1 className='subject-name' >{title}</h1>
+              <h1 className='subject-name' >{subjectTitle}</h1>
               <div 
                   className='homework-status' 
                   style={{

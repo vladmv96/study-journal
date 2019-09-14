@@ -8,7 +8,7 @@ function HomeworkModal({
     tasks,
     deadlineDate,
     teacherName,
-    title,
+    subjectTitle,
     status,
 }) {
     return (
@@ -19,9 +19,9 @@ function HomeworkModal({
             <div className='homework-modal-container-gradient' onClick={(e) => e.stopPropagation(e)}>
                 <div className='homework-modal-container' >
                     <div className='homework-modal-close-button' onClick={() => toggleHomeworkCardModal()}>
-                        <CloseButton width="" fill='#999'/>
+                        <CloseButton fill='#999'/>
                     </div>
-                    <div className='homework-modal-title'>{title}</div>
+                    <div className='homework-modal-title'>{subjectTitle}</div>
                     <div className='homework-modal-tasks-container'>
                         <div className='homework-modal-tasks'>Задание: {tasks}</div>
                         <button className='homework-modal-tasks-files'>Скачать файл</button>

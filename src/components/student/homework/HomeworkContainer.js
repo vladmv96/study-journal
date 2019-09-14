@@ -5,12 +5,13 @@ import HomeworkModal from './HomeworkModal';
 
 function HomeworkContainer({
     subjectHomeworksList,
-    title,
+    subjectTitle,
     teacherName
 }) {
 
     const [homeworkModalIsOpen, setHomeworkModalIsOpen] = useState(false);
     const [currentHomeworkId, setCurrentHomeworkId] = useState(0);
+    const currentHomework = subjectHomeworksList && subjectHomeworksList.find(item => item.id === currentHomeworkId);
 
     function handleHomeworkCardClick(id) {
         setCurrentHomeworkId(id);
@@ -38,7 +39,7 @@ function HomeworkContainer({
             className='homework-container'
         >
             <div>
-                <div className='homework-container-title'>{title || 'Домашнее задание'}</div>
+                <div className='homework-container-title'>{subjectTitle || 'Домашнее задание'}</div>
                 <div className='homework-container-cards'>
                     {subjectHomeworksList && subjectHomeworksList.map(renderHomeworkCard)}
                 </div>
@@ -48,11 +49,11 @@ function HomeworkContainer({
                 <HomeworkModal 
                     currentHomeworkId={currentHomeworkId} 
                     toggleHomeworkCardModal={toggleHomeworkCardModal}
-                    tasks={subjectHomeworksList[currentHomeworkId].tasks}
-                    deadlineDate={subjectHomeworksList[currentHomeworkId].deadlineDate}
+                    tasks={currentHomework.tasks}
+                    deadlineDate={currentHomework.deadlineDate}
                     teacherName={teacherName}
-                    title={title}
-                    status={subjectHomeworksList[currentHomeworkId].status}
+                    subjectTitle={subjectTitle}
+                    status={currentHomework.status}
                 />}
             
         </div>
