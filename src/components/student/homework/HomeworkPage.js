@@ -5,15 +5,14 @@ import HomeworkContainer from './HomeworkContainer';
 function HomeworkPage ({
     subjectsList,
     homeworksList
-
 }) {
     function renderHomeworkContainer(item) {
         return (
             <HomeworkContainer
                 subjectId={item.id}
                 teacherName={item.teacherName}
-                subjectTitle={item.subjectTitle}
-                homeworksList={homeworksList[item.id]}
+                title={item.title}
+                subjectHomeworksList={homeworksList[item.id]}
             />
         )
     }

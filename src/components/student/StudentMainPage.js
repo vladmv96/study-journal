@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import MainPageHeader from '../MainPageHeader';
-import SubjectCardsContainer from '../SubjectCardsContainer';
-import SubjectPage from './SubjectPage';
-import HomeworkPage from './HomeworkPage';
+import MainPageHeader from '../Header';
+import SubjectCardsContainer from './subjects/SubjectCardsContainer';
+import SubjectPage from './subjects/SubjectPage';
+import HomeworkPage from './homework/HomeworkPage';
+import MarksProgressPage from './marksProgress/MarksProgressPage';
 import { STUDENT_ROLE } from 'sources/constants/roles';
 import {
     CARDS_ROUTE,
     MAIN_ROUTE,
-    HOMEWORKS_ROUTE
+    HOMEWORKS_ROUTE,
+    MARKS_PROGRESS_ROUTE
 } from 'sources/constants/routes';
 import { getSubjectsFetch, getHomeworksFetch } from 'sources/API';
 import { testSubjects, testHomeworks } from 'sources/test_data';
@@ -15,7 +17,7 @@ import 'styles/student/StudentMainPage.css';
 
 function StudentMainPage() {
     const [currentPage, setCurrentPage] = useState(HOMEWORKS_ROUTE);
-    const [subjectId, setSubjectId] = useState(null);
+    const [selectedSubjectId, setSelectedSubjectId] = useState(null);
     const [subjectsList, setSubjectsList] = useState(testSubjects);
     const [homeworksList, setHomeworksList] = useState(testHomeworks);
 
@@ -30,10 +32,8 @@ function StudentMainPage() {
 
     function handleSubjectCardClick(id) {
         setCurrentPage(MAIN_ROUTE);
-        setSubjectId(id);
-    }
-
-    
+        setSelectedSubjectId(id);
+    } 
 
     return (
         <div className='student-main-page'>
@@ -49,12 +49,18 @@ function StudentMainPage() {
             />}
             {currentPage === MAIN_ROUTE &&
             <SubjectPage
-                subjectId={subjectId}
-                subject={subjectsList[subjectId - 1]}
+                subjectId={selectedSubjectId}
+                subject={subjectsList.find(item => item.id === selectedSubjectId)}
                 homeworksList={homeworksList}
             />}
             {currentPage === HOMEWORKS_ROUTE &&
             <HomeworkPage 
+                subjectsList={subjectsList}
+                homeworksList={homeworksList}
+            />
+            }
+            {currentPage === MARKS_PROGRESS_ROUTE &&
+            <MarksProgressPage 
                 subjectsList={subjectsList}
                 homeworksList={homeworksList}
             />

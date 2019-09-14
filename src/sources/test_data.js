@@ -1,50 +1,50 @@
 const testSubjects = [
   {
     id: 1,
-    subjectTitle: "Математика",
+    title: "Математика",
     homeworkStatus: "done",
     teacherName: "Anastasiya",
     averageMark: "4.8"
   },
   {
     id: 2,
-    subjectTitle: "Русский язык",
-    homeworkStatus: "inprogress",
+    title: "Русский язык",
+    homeworkStatus: "in_progress",
     teacherName: "Anastasiya",
     averageMark: "4.6"
   },
   {
     id: 3,
-    subjectTitle: "Английский язык",
-    homeworkStatus: "nodone",
+    title: "Английский язык",
+    homeworkStatus: "no_done",
     teacherName: "Anastasiya",
     averageMark: "3.7"
   },
   {
     id: 4,
-    subjectTitle: "Физика",
+    title: "Физика",
     homeworkStatus: "done",
     teacherName: "Anastasiya",
     averageMark: "4.9"
   },
   {
     id: 5,
-    subjectTitle: "История",
+    title: "История",
     homeworkStatus: "done",
     teacherName: "Anastasiya",
     averageMark: ""
   },
   {
     id: 6,
-    subjectTitle: "География",
+    title: "География",
     homeworkStatus: "done",
     teacherName: "Anastasiya",
     averageMark: "3.6"
   },
   {
     id: 7,
-    subjectTitle: "Обществознание",
-    homeworkStatus: "nodone",
+    title: "Обществознание",
+    homeworkStatus: "no_done",
     teacherName: "Anastasiya",
     averageMark: "4.0"
   }
@@ -57,35 +57,41 @@ const testHomeworks = {
                 "id": 0,
                 "tasks": "113",
                 "deadlineDate": "01.09.2020",
-                "homeworkStatus": "inprogress"
+                "status": "in_progress",
+                "mark": ''
             },
             {   "id": 1,
                 "tasks": "113 34325 34 342 ",
                 "deadlineDate": "09.09.2019",
-                "homeworkStatus": "done"
+                "status": "done",
+                "mark": '4'
             },
             {
                 "id": 2,
                 "tasks": "113",
                 "deadlineDate": "01.09.2020",
-                "homeworkStatus": "nodone"
+                "status": "no_done",
+                "mark": ''
             },
             {
                 "id": 3,
                 "tasks": "113",
                 "deadlineDate": "01.09.2020",
-                "homeworkStatus": "inprogress"
+                "status": "in_progress",
+                "mark": ''
             },
             {   "id": 4,
                 "tasks": "113 34325 34 342 ",
                 "deadlineDate": "09.09.2019",
-                "homeworkStatus": "done"
+                "status": "done",
+                "mark": '5'
             },
             {
                 "id": 5,
                 "tasks": "113",
                 "deadlineDate": "01.09.2020",
-                "homeworkStatus": "inprogress"
+                "status": "in_progress",
+                "mark": ''
             }
         ],
         "2": [
@@ -93,18 +99,21 @@ const testHomeworks = {
                 "id": 0,
                 "tasks": "234",
                 "deadlineDate": "01.09.2020",
-                "homeworkStatus": "inprogress"
+                "status": "in_progress",
+                "mark": ''
             },
             {   "id": 1,
                 "tasks": "1234432 ",
                 "deadlineDate": "09.09.2019",
-                "homeworkStatus": "done"
+                "status": "done",
+                "mark": '4'
             },
             {
                 "id": 2,
                 "tasks": "1254352",
                 "deadlineDate": "01.09.2020",
-                "homeworkStatus": "nodone"
+                "status": "no_done",
+                "mark": ''
             }
         ]
 }

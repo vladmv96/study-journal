@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
-import HomeworkCard from '../HomeworkCard.js';
+import HomeworkCard from './HomeworkCard';
 import 'styles/student/HomeworkContainer.css';
 import HomeworkModal from './HomeworkModal';
 
 function HomeworkContainer({
-    subjectId,
-    homeworksList,
-    subjectTitle,
+    subjectHomeworksList,
+    title,
     teacherName
 }) {
 
@@ -29,7 +28,7 @@ function HomeworkContainer({
                 id={item.id}
                 tasks={item.tasks}
                 deadlineDate={item.deadlineDate}
-                homeworkStatus={item.homeworkStatus}
+                status={item.status}
                 handleHomeworkCardClick={handleHomeworkCardClick}
             />
         )
@@ -39,9 +38,9 @@ function HomeworkContainer({
             className='homework-container'
         >
             <div>
-                <div className='homework-container-title'>{subjectTitle || 'Домашнее задание'}</div>
+                <div className='homework-container-title'>{title || 'Домашнее задание'}</div>
                 <div className='homework-container-cards'>
-                    {homeworksList && homeworksList.map(renderHomeworkCard)}
+                    {subjectHomeworksList && subjectHomeworksList.map(renderHomeworkCard)}
                 </div>
             </div>
 
@@ -49,11 +48,11 @@ function HomeworkContainer({
                 <HomeworkModal 
                     currentHomeworkId={currentHomeworkId} 
                     toggleHomeworkCardModal={toggleHomeworkCardModal}
-                    tasks={homeworksList[currentHomeworkId].tasks}
-                    deadlineDate={homeworksList[currentHomeworkId].deadlineDate}
+                    tasks={subjectHomeworksList[currentHomeworkId].tasks}
+                    deadlineDate={subjectHomeworksList[currentHomeworkId].deadlineDate}
                     teacherName={teacherName}
-                    subjectTitle={subjectTitle}
-                    homeworkStatus={homeworksList[currentHomeworkId].homeworkStatus}
+                    title={title}
+                    status={subjectHomeworksList[currentHomeworkId].status}
                 />}
             
         </div>

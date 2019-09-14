@@ -1,10 +1,10 @@
 import React from 'react';
 import 'styles/student/SubjectCard.css';
 import {getHomeworkStatusColor, getSubjectCardColor} from 'sources/utils';
-import { statusesDisplay } from 'sources/constants/statusesDisplay';
+import { statusesDisplay } from 'sources/constants/statuses';
 
 function SubjectCard({
-    subjectTitle,
+    title,
     homeworkStatus,
     teacherName,
     averageMark,
@@ -17,13 +17,13 @@ function SubjectCard({
       <div
         className='module-border-wrap'
         style={{
-          background: getSubjectCardColor(subjectTitle)
+          background: getSubjectCardColor(title)
         }}>
           <div
             className='subject-card'
             onClick={() => handleCardClick(id)}
           >
-              <h1 className='subject-name' >{subjectTitle}</h1>
+              <h1 className='subject-name' >{title}</h1>
               <div 
                   className='homework-status' 
                   style={{

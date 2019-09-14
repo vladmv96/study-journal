@@ -1,6 +1,6 @@
 import React from 'react';
 import 'styles/SubjectCardsContainer.css';
-import SubjectCard from './student/SubjectCard';
+import SubjectCard from './SubjectCard';
 
 function SubjectCardsContainer({
     handleCardClick,
@@ -12,7 +12,7 @@ function SubjectCardsContainer({
             <SubjectCard
                 key={item.id}
                 id={item.id}
-                subjectTitle={item.subjectTitle}
+                title={item.title}
                 homeworkStatus={item.homeworkStatus}
                 teacherName={item.teacherName}
                 averageMark={item.averageMark}

@@ -1,12 +1,12 @@
 import React from 'react';
 import {getSubjectCardColor} from 'sources/utils';
 import 'styles/HomeworkCard.css';
-import { statusesDisplay } from 'sources/constants/statusesDisplay';
+import { statusesDisplay } from 'sources/constants/statuses';
 
 function HomeworkCard({
     tasks,
     deadlineDate,
-    homeworkStatus,
+    status,
     handleHomeworkCardClick,
     id
 }) {
@@ -27,7 +27,7 @@ function HomeworkCard({
                     {deadlineDate}
                 </div>
                 <div className='homework-card-status'>
-                    {statusesDisplay[homeworkStatus] || homeworkStatus}
+                    {statusesDisplay[status] || status}
                 </div>
             </div>
             
