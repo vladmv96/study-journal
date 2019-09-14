@@ -2,16 +2,16 @@ import React, { useState, useEffect } from 'react';
 import MainPageHeader from '../MainPageHeader';
 import CardsContainer from '../CardsContainer';
 import SubjectPage from './SubjectPage';
-import HomeworksPage from './HomeworksPage';
-import { STUDENT_ROLE } from '../../sources/constants/roles';
+import HomeworksContainer from './HomeworksContainer';
+import { STUDENT_ROLE } from 'sources/constants/roles';
 import {
     CARDS_ROUTE,
     MAIN_ROUTE,
     HOMEWORKS_ROUTE
-} from '../../sources/constants/routes';
-import { getSubjectsFetch, getHomeworksFetch } from '../../sources/API';
-import { testSubjects, testHomeworks } from '../../sources/test_data';
-import '../../styles/StudentMainPage.css';
+} from 'sources/constants/routes';
+import { getSubjectsFetch, getHomeworksFetch } from 'sources/API';
+import { testSubjects, testHomeworks } from 'sources/test_data';
+import 'styles/student/StudentMainPage.css';
 
 function StudentMainPage() {
     const [currentPage, setCurrentPage] = useState(HOMEWORKS_ROUTE);
@@ -25,7 +25,7 @@ function StudentMainPage() {
         });
         getHomeworksFetch(1).then((data) => {
             setHomeworksList(data);
-        })
+        });
     }, [])
 
     function handleSubjectCardClick(id) {
@@ -33,9 +33,9 @@ function StudentMainPage() {
         setSubjectId(id);
     }
 
-    function renderHomeworksPage(item) {
+    function renderHomeworksContainer(item) {
         return (
-            <HomeworksPage
+            <HomeworksContainer
                 subjectId={item.id}
                 teacherName={item.teacherName}
                 subjectTitle={item.subjectTitle}
@@ -44,11 +44,8 @@ function StudentMainPage() {
         )
     }
 
-    console.log(subjectsList, subjectId)
-
-
     return (
-        <div className='studentMainPage'>
+        <div className='student-main-page'>
             <MainPageHeader
                 currentPage={currentPage}
                 setCurrentPage={setCurrentPage}
@@ -67,7 +64,7 @@ function StudentMainPage() {
             />}
             {currentPage === HOMEWORKS_ROUTE &&
                 <div>
-                    {subjectsList.map(renderHomeworksPage)}
+                    {subjectsList.map(renderHomeworksContainer)}
                 </div>
                 }
         </div>

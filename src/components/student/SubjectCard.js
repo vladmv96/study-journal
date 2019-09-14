@@ -1,6 +1,6 @@
 import React from 'react';
-import '../../styles/SubjectCard.css';
-import {getHomeworkStatusColor, getSubjectCardColor} from '../../sources/utils';
+import 'styles/student/SubjectCard.css';
+import {getHomeworkStatusColor, getSubjectCardColor} from 'sources/utils';
 
 function SubjectCard({
     subjectTitle,
@@ -19,18 +19,18 @@ function SubjectCard({
           background: getSubjectCardColor(subjectTitle)
         }}>
           <div
-            className='subjectCard'
+            className='subject-card'
             onClick={() => handleCardClick(id)}
           >
-              <h1 className='subjectName' >{subjectTitle}</h1>
+              <h1 className='subject-name' >{subjectTitle}</h1>
               <div 
-                  className='homeworkStatus' 
+                  className='homework-status' 
                   style={{
                       color: `rgb(${getHomeworkStatusColor(homeworkStatus)})`
                   }}>
                   Д/з: {homeworkStatus}</div>
-              <h2 className='averageMark'>{averageMark}</h2>
-              <h5 className='teacherName'>Учитель: {teacherName}</h5>
+              <h2 className='average-mark'>{averageMark}</h2>
+              <h5 className='teacher-name'>Учитель: {teacherName}</h5>
           </div>
       </div>
     </div>

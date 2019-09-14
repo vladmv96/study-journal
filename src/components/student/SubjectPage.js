@@ -1,6 +1,5 @@
 import React from 'react';
-import HomeworksPage from './HomeworksPage';
-import '../../styles/SubjectPage.css';
+import HomeworksContainer from './HomeworksContainer';
 
 function SubjectPage({
     subjectId,
@@ -12,7 +11,7 @@ function SubjectPage({
         <div className='subjectPage'>
             <h1>Математика</h1>
             <h2>Id: {subjectId}</h2>
-            <HomeworksPage
+            <HomeworksContainer
                 subjectId={subjectId}
                 homeworksList={homeworksList[subjectId]}
                 teacherName={subject.teacherName}

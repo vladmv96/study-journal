@@ -26,7 +26,7 @@
     transform: scale(0.95);
 }
 
-.subjectCard {
+.subject-card {
     font-size: 1em;
     min-width: 275px;
     display: grid;
@@ -42,31 +42,31 @@
     user-select: none;
 }
 
-.subjectCard:hover {
+.subject-card:hover {
     background-color:rgba(255, 255, 255, 0.7);
 }
 
-.subjectCard:active {
+.subject-card:active {
     filter: none;
 }
 
-.subjectName {
+.subject-name {
     font-size: 1.8em;
     margin: auto 0px;
 }
 
-.homeworkStatus {
+.homework-status {
     margin-top: auto;
     margin-bottom: auto;
     font-weight: bold;
 }
 
-.averageMark {
+.average-mark {
     margin-top: auto;
     margin-bottom: auto;
 }
 
-.teacherName {
+.teacher-name {
     margin-top: auto;
     margin-bottom: 5px;
     margin-right: 5px;

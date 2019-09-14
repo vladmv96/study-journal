@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/CardsContainer.css';
+import 'styles/CardsContainer.css';
 import SubjectCard from './student/SubjectCard';
 
 function CardsContainer({
@@ -21,7 +21,7 @@ function CardsContainer({
         );
     }
     return (
-        <div className='cardsContainer'>
+        <div className='cards-container'>
             {subjects && subjects.map(renderSubjectCard)}
         </div>
     );

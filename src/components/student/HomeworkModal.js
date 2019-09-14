@@ -1,6 +1,6 @@
 import React from 'react';
-import '../../styles/HomeworkModal.css';
-import { CloseButton } from '../../icons/closeButton';
+import 'styles/student/HomeworkModal.css';
+import { CloseButton } from 'icons/closeButton';
 
 function HomeworkModal({
     currentHomeworkId,
@@ -22,8 +22,7 @@ function HomeworkModal({
                     <div className='homework-modal-tasks'>{tasks}</div>
                     <div className='homework-modal-deadlineDate'>{deadlineDate}</div>
                     <div className='homework-modal-progress'>Selector of progress</div>
-                    {currentHomeworkId}
-                    
+                    {currentHomeworkId} 
                 </div>
             </div>
             

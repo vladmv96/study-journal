@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap');
 
 
-.mainPageHeader {
+.main-page-header {
     width: 75vw;
     margin-right: 0px;
     margin-left: auto;
@@ -14,7 +14,7 @@
     margin-bottom: 2vh;
 }
 
-.mainPageHeader button {
+.main-page-header button {
     font-size: 1.2em;
     font-family:  'Comfortaa', cursive;
     border: none;
@@ -24,28 +24,28 @@
     color:rgb(255, 255, 255);
 }
 
-.mainPageHeader .active-button {
+.main-page-header .active-button {
     font-weight: bold;
 }
 
 
-.mainPageHeader .headerNavButton:hover {
-
+.main-page-header .header-nav-button:hover {
+    text-shadow: 2px 1px 5px rgba(66,66,66,0.46);
 }
 
-.mainPageHeader .active-button:hover {
+.main-page-header .active-button:hover {
     border-radius: 5px 5px 0 0;
 }
 
-.mainPageHeader .headerNavButton:active {
+.main-page-header .header-nav-button:active {
     font-weight: bold;
 }
 
-.headerNavButton {
+.header-nav-button {
     cursor: pointer;
 }
 
-.closeButton {
+.close-button {
     grid-column-start: -1;
     grid-column-end: -2;
     cursor: pointer;

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import HomeworkCard from '../HomeworkCard.js';
-import '../../styles/HomeworksPage.css';
+import 'styles/student/HomeworksContainer.css';
 import HomeworkModal from './HomeworkModal';
 
-function HomeworksPage({
+function HomeworksContainer({
     subjectId,
     homeworksList,
     subjectTitle,
@@ -58,4 +58,4 @@ function HomeworksPage({
     );
 }
 
-export default HomeworksPage;
+export default HomeworksContainer;
