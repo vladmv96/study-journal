@@ -1,10 +1,10 @@
 import React from 'react';
 import 'styles/SubjectCardsContainer.css';
-import SubjectCard from './student/SubjectCard';
+import SubjectCard from './SubjectCard';
 
 function SubjectCardsContainer({
     handleCardClick,
-    subjects
+    subjectsList
 }) {
 
     function renderSubjectCard(item) {
@@ -22,7 +22,7 @@ function SubjectCardsContainer({
     }
     return (
         <div className='cards-container'>
-            {subjects && subjects.map(renderSubjectCard)}
+            {subjectsList && subjectsList.map(renderSubjectCard)}
         </div>
     );
 }
