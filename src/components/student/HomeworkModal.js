@@ -21,7 +21,7 @@ function HomeworkModal({
                     <div className='homework-modal-close-button' onClick={() => toggleHomeworkCardModal()}><CloseButton width="" fill='#999'/></div>
                     <div className='homework-modal-title'>{subjectTitle}</div>
                     <div className='homework-modal-tasks-container'>
-                        <div className='homework-modal-tasks'>Задание: "Lorem ipsum dolor sit amet, consectetur adipiscing 
+                    <div className='homework-modal-tasks'>Задание: "Lorem ipsum dolor sit amet, consectetur adipiscing 
                         elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
                          ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
