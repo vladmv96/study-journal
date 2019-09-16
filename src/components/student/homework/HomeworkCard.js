@@ -1,6 +1,6 @@
 import React from 'react';
 import {getSubjectCardColor} from 'sources/utils';
-import 'styles/HomeworkCard.css';
+import 'styles/HomeworkCard.scss';
 import { statusesDisplay } from 'sources/constants/statuses';
 
 function HomeworkCard({

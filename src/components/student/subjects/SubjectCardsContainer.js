@@ -1,5 +1,5 @@
 import React from 'react';
-import 'styles/SubjectCardsContainer.css';
+import 'styles/SubjectCardsContainer.scss';
 import SubjectCard from './SubjectCard';
 
 function SubjectCardsContainer({

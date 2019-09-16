@@ -1,5 +1,5 @@
 import React from 'react';
-import 'styles/student/MarksProgressPage.css';
+import 'styles/student/MarksProgressPage.scss';
 
 function MarksProgressPage() {
   return (

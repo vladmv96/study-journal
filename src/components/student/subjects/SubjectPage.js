@@ -14,6 +14,7 @@ function SubjectPage({
                 <HomeworkContainer
                     subjectHomeworksList={subject.homework}
                     teacherName={subject.teacherName}
+                    subjectTitle={subject.subjectTitle}
                 />
             }
             <h2>Успеваемость</h2>

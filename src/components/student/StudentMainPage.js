@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import 'styles/student/StudentMainPage.css';
+import 'styles/student/StudentMainPage.scss';
 import MainPageHeader from '../Header';
 import SubjectCardsContainer from './subjects/SubjectCardsContainer';
 import SubjectPage from './subjects/SubjectPage';

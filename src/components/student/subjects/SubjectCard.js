@@ -1,5 +1,5 @@
 import React from 'react';
-import 'styles/student/SubjectCard.css';
+import 'styles/student/SubjectCard.scss';
 import {getHomeworkStatusColor, getSubjectCardColor} from 'sources/utils';
 import { statusesDisplay } from 'sources/constants/statuses';
 

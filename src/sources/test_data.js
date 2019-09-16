@@ -4,7 +4,7 @@ const testStudentData = {
   subjects: [
     {
       id: 1,
-      title: "Математика",
+      subjectTitle: "Математика",
       homeworkStatus: "done",
       teacherName: "Анастасия",
       averageMark: "4,6",
@@ -61,7 +61,7 @@ const testStudentData = {
     },
     {
       id: 2,
-      title: "Русский язык",
+      subjectTitle: "Русский язык",
       homeworkStatus: "in_progress",
       teacherName: "Anastasiya",
       averageMark: "4.6",
@@ -91,35 +91,35 @@ const testStudentData = {
     },
     {
       id: 3,
-      title: "Английский язык",
+      subjectTitle: "Английский язык",
       homeworkStatus: "no_done",
       teacherName: "Anastasiya",
       averageMark: "3.7"
     },
     {
       id: 4,
-      title: "Физика",
+      subjectTitle: "Физика",
       homeworkStatus: "done",
       teacherName: "Anastasiya",
       averageMark: "4.9"
     },
     {
       id: 5,
-      title: "История",
+      subjectTitle: "История",
       homeworkStatus: "done",
       teacherName: "Anastasiya",
       averageMark: ""
     },
     {
       id: 6,
-      title: "География",
+      subjectTitle: "География",
       homeworkStatus: "done",
       teacherName: "Anastasiya",
       averageMark: "3.6"
     },
     {
       id: 7,
-      title: "Обществознание",
+      subjectTitle: "Обществознание",
       homeworkStatus: "no_done",
       teacherName: "Anastasiya",
       averageMark: "4.0"

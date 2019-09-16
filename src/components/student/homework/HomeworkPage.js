@@ -1,5 +1,5 @@
 import React from 'react';
-import 'styles/student/HomeworkPage.css';
+import 'styles/student/HomeworkPage.scss';
 import HomeworkContainer from './HomeworkContainer';
 
 function HomeworkPage ({

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import HomeworkCard from './HomeworkCard';
-import 'styles/student/HomeworkContainer.css';
+import 'styles/student/HomeworkContainer.scss';
 import HomeworkModal from './HomeworkModal';
 
 function HomeworkContainer({

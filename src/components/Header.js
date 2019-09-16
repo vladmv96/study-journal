@@ -1,5 +1,5 @@
 import React from 'react';
-import 'styles/MainPageHeader.css';
+import 'styles/MainPageHeader.scss';
 import { STUDENT_ROLE, TEACHER_ROLE } from 'sources/constants/roles';
 import { SUBJECT_CARDS_ROUTE, HOMEWORKS_ROUTE, MARKS_PROGRESS_ROUTE } from 'sources/constants/routes';
 
