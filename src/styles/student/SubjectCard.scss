@@ -72,10 +72,13 @@
 
 .night .subject-section {
     .module-border-wrap {
-        background: linear-gradient(45deg, #ff9549, #ff1483);
+        background: linear-gradient(45deg,  #63CCFC, #865CC0);
     }
     .subject-card {
-        background-color: rgb(61, 61, 61);
+        background-color: rgba(47, 66, 93, 0.9);
         color: white;
+        &:hover {
+            background-color: rgba(47, 66, 93, 0.8);
+        }
     }
 }

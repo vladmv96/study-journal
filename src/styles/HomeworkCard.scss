@@ -57,10 +57,13 @@
 
 .night .homework {
     &.card-border {
-        background:linear-gradient(45deg, #ff9549, #ff1483);
+        background:linear-gradient(45deg, #63CCFC, #865CC0);
     }
     .card {
-        background-color: rgb(60, 60, 60);
+        background-color: rgba(47, 66, 93, 0.9);
         color: white;
+        &:hover {
+            background-color: rgba(47, 66, 93, 0.8);
+        }
     }
 }

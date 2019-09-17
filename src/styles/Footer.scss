@@ -3,7 +3,14 @@
     justify-content: center;
     align-items: center;
     background-color: black;
-    height: 400px;
+    height: 350px;
     color: white;
     font-size: 50px;
+    background: bottom no-repeat url('../images/footerBackground.svg');
+}
+
+.night {
+    .footer {
+        background: bottom no-repeat url('../images/footerBackground\ night.svg');
+    }
 }

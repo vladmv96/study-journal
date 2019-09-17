@@ -1,13 +1,9 @@
 .student-main-page {
-    background: right top no-repeat url('../../images/studentMainPageBackground.svg');
+    
     background-size: 90% auto;
     min-height: 100vh;
 }
 
-.night .student-main-page {
-    background-image: url('../../images/studentMainPageBackground copy.svg');
-    background-color: rgb(51, 51, 51);
-}
 
 @media screen and (min-width: 500px) and (max-width: 1100px) {
     .student-main-page {

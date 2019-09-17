@@ -3,12 +3,12 @@
 .App {
     font-family: 'Exo 2', sans-serif;
     color:rgb(45, 192, 172);
+    background: right top no-repeat url('../images/studentMainPageBackground.svg');
     
 
     .theme-changer-button {
         width: 30px;
         height: 30px;
-        background-color: purple;
         background: center no-repeat url('../icons/crescent-moon_icon-icons.com_70215.svg');
         position: fixed;
         right: 10px;
@@ -21,5 +21,8 @@
         .theme-changer-button {
             background: center no-repeat url('../icons/mbrisun2_99594.svg');
         }
+
+        background-image: url('../images/studentMainPageBackground night.svg');
+        background-color: #14243B;
     }
 }

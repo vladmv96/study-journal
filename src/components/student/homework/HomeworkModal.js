@@ -26,7 +26,7 @@ function HomeworkModal({
             <div className='container-gradient' onClick={(e) => e.stopPropagation(e)}>
                 <div className='container' >
                     <div className='close-button' onClick={() => toggleHomeworkCardModal()}>
-                        <CloseButton fill='#999'/>
+                        <CloseButton fill='#B9B9CC'/>
                     </div>
                     <div className='title'>{subjectTitle}</div>
                     <div className='tasks-container'>
@@ -58,6 +58,9 @@ function HomeworkModal({
                         <div className='comment'>Добавить комментарий</div>
                         <div className='files'>Добавить файл</div>
                     </div>
+                    <button className='save-button'>
+                        Save
+                    </button>
                 </div>
             </div>
             
