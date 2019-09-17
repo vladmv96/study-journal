@@ -12,45 +12,46 @@
     grid-gap: 15px;
     position: relative;
     margin-bottom: 2vh;
+
+    button {
+        font-size: 1.2em;
+        font-family:  'Comfortaa', cursive;
+        border: none;
+        background: none;
+        outline: none;
+        transition-duration: 0.5s;
+        color:rgb(255, 255, 255);
+
+        &.active-button {
+            font-weight: bold;
+
+            &:hover {
+                text-shadow: none;
+            }
+            &:active {
+                font-weight: bold;
+            }
+        }
+    }
+
+    .header-nav-button {
+        cursor: pointer;
+        &:hover {
+            text-shadow: 2px 1px 5px rgba(72, 99, 94, 0.377);
+        }
+        &:active {
+            transform: scale(0.95);
+        }
+    }
+
+    .close-button {
+        grid-column-start: -1;
+        grid-column-end: -2;
+        cursor: pointer;
+    }
+
+    @media screen and (max-width: 500px) {
+        margin-right: auto;
+    }
 }
 
-.main-page-header button {
-    font-size: 1.2em;
-    font-family:  'Comfortaa', cursive;
-    border: none;
-    background: none;
-    outline: none;
-    transition-duration: 0.5s;
-    color:rgb(255, 255, 255);
-}
-
-.main-page-header .active-button {
-    font-weight: bold;
-}
-
-
-.main-page-header .header-nav-button:hover {
-    text-shadow: 2px 1px 5px rgba(72, 99, 94, 0.377);
-}
-
-.main-page-header .header-nav-button:active {
-    transform: scale(0.95);
-}
-
-.main-page-header .active-button:hover {
-    text-shadow: none;
-}
-
-.main-page-header .header-nav-button:active {
-    font-weight: bold;
-}
-
-.header-nav-button {
-    cursor: pointer;
-}
-
-.main-page-header .close-button {
-    grid-column-start: -1;
-    grid-column-end: -2;
-    cursor: pointer;
-}

@@ -3,4 +3,23 @@
 .App {
     font-family: 'Exo 2', sans-serif;
     color:rgb(45, 192, 172);
+    
+
+    .theme-changer-button {
+        width: 30px;
+        height: 30px;
+        background-color: purple;
+        background: center no-repeat url('../icons/crescent-moon_icon-icons.com_70215.svg');
+        position: fixed;
+        right: 10px;
+        bottom: 10px;
+        cursor: pointer;
+        z-index: 2;
+    }
+    &.night {
+        color: white;
+        .theme-changer-button {
+            background: center no-repeat url('../icons/mbrisun2_99594.svg');
+        }
+    }
 }

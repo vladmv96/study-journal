@@ -1,74 +1,81 @@
-
-
 .subject-section {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    .module-border-wrap {
+        max-width: 310px;
+        height: 180px;
+        min-height: 150px;
+        position: relative;
+        background: linear-gradient(45deg, #F1F9D3, #97F7F5);
+        padding: 7px;
+        border-radius: 15px;
+        box-shadow: 11px 10px 16px -17px rgb(58, 105, 92);
+        transition-duration: 0.4s;
+
+        &:hover {
+            transform: scale(1.04);
+        }
+        &:active {
+            transform: scale(0.95);
+        }
+    
+    }
+    .subject-card {
+        font-size: 1em;
+        min-width: 275px;
+        display: grid;
+        grid-template-columns: 1;
+        grid-template-rows: repeat(auto-fill, minmax(40px, 1fr));
+        height: 90%;
+        color:rgb(45, 192, 172);
+        border-radius: 10px;
+        padding: 0.5em 1em;
+        background-color:rgba(255, 255, 255, 0.9);
+        transition-duration: 0.2s;
+        cursor: pointer;
+        user-select: none;
+
+        &:hover {
+            background-color:rgba(255, 255, 255, 0.7);
+        }
+        &:active {
+            filter: none;
+        }
+    
+    }
+
+    .subject-name {
+        font-size: 1.8em;
+        margin: auto 0px;
+    }
+
+    .homework-status {
+        margin-top: auto;
+        margin-bottom: auto;
+        font-weight: bold;
+    }
+
+    .average-mark {
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .teacher-name {
+        margin-top: auto;
+        margin-bottom: 5px;
+        margin-right: 5px;
+        margin-left: auto;
+    }
 }
 
-.module-border-wrap {
-    max-width: 310px;
-    height: 180px;
-    min-height: 150px;
-    position: relative;
-    background: linear-gradient(45deg, #F1F9D3, #97F7F5);
-    padding: 7px;
-    border-radius: 15px;
-    box-shadow: 11px 10px 16px -17px rgb(58, 105, 92);
-    transition-duration: 0.4s;
-}
-
-.module-border-wrap:hover {
-    transform: scale(1.04);
-}
-
-.module-border-wrap:active {
-    transform: scale(0.95);
-}
-
-.subject-card {
-    font-size: 1em;
-    min-width: 275px;
-    display: grid;
-    grid-template-columns: 1;
-    grid-template-rows: repeat(auto-fill, minmax(40px, 1fr));
-    height: 90%;
-    color:rgb(45, 192, 172);
-    border-radius: 10px;
-    padding: 0.5em 1em;
-    background-color:rgba(255, 255, 255, 0.9);
-    transition-duration: 0.2s;
-    cursor: pointer;
-    user-select: none;
-}
-
-.subject-card:hover {
-    background-color:rgba(255, 255, 255, 0.7);
-}
-
-.subject-card:active {
-    filter: none;
-}
-
-.subject-name {
-    font-size: 1.8em;
-    margin: auto 0px;
-}
-
-.homework-status {
-    margin-top: auto;
-    margin-bottom: auto;
-    font-weight: bold;
-}
-
-.average-mark {
-    margin-top: auto;
-    margin-bottom: auto;
-}
-
-.teacher-name {
-    margin-top: auto;
-    margin-bottom: 5px;
-    margin-right: 5px;
-    margin-left: auto;
+.night .subject-section {
+    .module-border-wrap {
+        background: linear-gradient(45deg, #ff9549, #ff1483);
+    }
+    .subject-card {
+        background-color: rgb(61, 61, 61);
+        color: white;
+    }
 }

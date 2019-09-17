@@ -1,6 +1,6 @@
 import React from 'react';
 import 'styles/student/SubjectCard.scss';
-import {getHomeworkStatusColor, getSubjectCardColor} from 'sources/utils';
+import {getHomeworkStatusColor, getCardColor} from 'sources/utils';
 import { statusesDisplay } from 'sources/constants/statuses';
 
 function SubjectCard({
@@ -16,9 +16,10 @@ function SubjectCard({
     <div className='subject-section'>
       <div
         className='module-border-wrap'
-        style={{
-          background: getSubjectCardColor(subjectTitle)
-        }}>
+        // style={{
+        //   background: getCardColor(subjectTitle)
+        // }}
+      >
           <div
             className='subject-card'
             onClick={() => handleCardClick(id)}
