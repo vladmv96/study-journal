@@ -1,7 +1,0 @@
-.subjectCardsContainer {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    width: 80vw;
-    margin: auto;
-}

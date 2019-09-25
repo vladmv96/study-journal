@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
-import HomeworkCard from '../HomeworkCard.js';
-import '../../styles/HomeworksPage.css';
+import HomeworkCard from './HomeworkCard';
+import 'styles/student/HomeworkContainer.scss';
 import HomeworkModal from './HomeworkModal';
 
-function HomeworksPage({
-    subjectId,
-    homeworksList,
-    subjectTitle
+function HomeworkContainer({
+    subjectHomeworksList,
+    subjectTitle,
+    teacherName
 }) {
 
     const [homeworkModalIsOpen, setHomeworkModalIsOpen] = useState(false);
     const [currentHomeworkId, setCurrentHomeworkId] = useState(0);
+    const currentHomework = subjectHomeworksList && subjectHomeworksList.find(item => item.id === currentHomeworkId);
 
     function handleHomeworkCardClick(id) {
         setCurrentHomeworkId(id);
@@ -28,30 +29,35 @@ function HomeworksPage({
                 id={item.id}
                 tasks={item.tasks}
                 deadlineDate={item.deadlineDate}
-                cardStatus={item.cardStatus}
+                status={item.status}
                 handleHomeworkCardClick={handleHomeworkCardClick}
             />
         )
     };
     return (
         <div 
-            className='homeworks-page'
+            className='homework-container'
         >
             <div>
-                <div className='homework-page-title'>{subjectTitle || 'Домашнее задание'}</div>
-                <div className='homework-cards-container'>
-                    {homeworksList && homeworksList[subjectId] && homeworksList[subjectId].map(renderHomeworkCard)}
+                <div className='homework-container-title'>{subjectTitle || 'Домашнее задание'}</div>
+                <div className='homework-container-cards'>
+                    {subjectHomeworksList && subjectHomeworksList.map(renderHomeworkCard)}
                 </div>
             </div>
 
-            {homeworkModalIsOpen &&
+            { homeworkModalIsOpen &&
                 <HomeworkModal 
                     currentHomeworkId={currentHomeworkId} 
                     toggleHomeworkCardModal={toggleHomeworkCardModal}
+                    tasks={currentHomework.tasks}
+                    deadlineDate={currentHomework.deadlineDate}
+                    teacherName={teacherName}
+                    subjectTitle={subjectTitle}
+                    status={currentHomework.status}
                 />}
             
         </div>
     );
 }
 
-export default HomeworksPage;
+export default HomeworkContainer;

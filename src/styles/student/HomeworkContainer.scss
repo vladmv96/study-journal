@@ -1,21 +1,14 @@
-.homework-page {
-    
-    border: 1px solid black;
-}
-
-.homework-page-title {
-    
+.homework-container-title {
     animation: 0.2s ease-in 0s 1 containerApear;
-    width: 50%;
+    width: 100%;
     text-align: center;
     font-size: 30px;
     font-weight: bold;
-    margin-left: 25%;
-    margin-bottom: 2%;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
 }
 
-.homework-cards-container {
-    
+.homework-container-cards {
     animation: 0.2s ease-in 0s 1 containerApear;
     display: grid;
     grid-template-columns: 1;
@@ -26,8 +19,11 @@
 }
 
 @media screen and (max-width: 500px) {
-    .homework-cards-container {
+    .homework-container-cards {
         width: 90vw;
+    }
+    .homework-container-title {
+        font-size: 25px;
     }
 }
 

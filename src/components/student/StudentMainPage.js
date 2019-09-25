@@ -1,71 +1,64 @@
 import React, { useState, useEffect } from 'react';
-import MainPageHeader from '../MainPageHeader';
-import CardsContainer from '../CardsContainer';
-import SubjectPage from './SubjectPage';
-import HomeworksPage from './HomeworksPage';
-import { STUDENT_ROLE } from '../../sources/constants/roles';
+import 'styles/student/StudentMainPage.scss';
+import MainPageHeader from '../Header';
+import SubjectCardsContainer from './subjects/SubjectCardsContainer';
+import SubjectPage from './subjects/SubjectPage';
+import HomeworkPage from './homework/HomeworkPage';
+import MarksProgressPage from './marksProgress/MarksProgressPage';
+import { STUDENT_ROLE } from 'sources/constants/roles';
 import {
-    CARDS_ROUTE,
-    MAIN_ROUTE,
-    HOMEWORKS_ROUTE
-} from '../../sources/constants/routes';
-import { getSubjectsFetch, getHomeworksFetch } from '../../sources/API';
-import { testSubjects, testHomeworks } from '../../sources/test_data';
+    SUBJECT_CARDS_ROUTE,
+    SUBJECT_ROUTE,
+    HOMEWORKS_ROUTE,
+    MARKS_PROGRESS_ROUTE
+} from 'sources/constants/routes';
+import { getStudentDataFetch } from 'sources/API';
+import { testStudentData } from 'sources/test_data.js';
 
 function StudentMainPage() {
     const [currentPage, setCurrentPage] = useState(HOMEWORKS_ROUTE);
-    const [subjectId, setSubjectId] = useState(null);
-    const [subjectsList, setSubjectsList] = useState(testSubjects);
-    const [homeworksList, setHomeworksList] = useState(testHomeworks);
+    const [selectedSubjectId, setSelectedSubjectId] = useState(null);
+    
+    const [studentData, setStudentData] = useState(testStudentData);
 
     useEffect(() => {
-        getSubjectsFetch(1).then((data) => {
-            setSubjectsList(data);
+        getStudentDataFetch(1).then((data) => {
+            setStudentData(data);
         });
-        getHomeworksFetch(1).then((data) => {
-            setHomeworksList(data);
-        })
     }, [])
 
     function handleSubjectCardClick(id) {
-        setCurrentPage(MAIN_ROUTE);
-        setSubjectId(id);
-    }
-
-    function renderHomeworksPage(item) {
-        return (
-            <HomeworksPage
-                subjectId={item.id}
-                subjectTitle={item.subjectTitle}
-                homeworksList={homeworksList}
-            />
-        )
-    }
-
+        setCurrentPage(SUBJECT_ROUTE);
+        setSelectedSubjectId(id);
+    } 
 
     return (
-        <div className='studentMainPage'>
+        <div className='student-main-page'>
             <MainPageHeader
                 currentPage={currentPage}
                 setCurrentPage={setCurrentPage}
                 role={STUDENT_ROLE}
             />
-            {currentPage === CARDS_ROUTE &&
-                <CardsContainer
-                    handleCardClick={handleSubjectCardClick}
-                    subjects={subjectsList}
-                 />}
-            {currentPage === MAIN_ROUTE &&
+            {currentPage === SUBJECT_CARDS_ROUTE &&
+            <SubjectCardsContainer
+                handleCardClick={handleSubjectCardClick}
+                subjectsList={studentData.subjects}
+            />}
+            {currentPage === SUBJECT_ROUTE &&
             <SubjectPage
-                subjectId={subjectId}
-                homeworksList={homeworksList}
+                subjectId={selectedSubjectId}
+                subject={studentData.subjects.find(item => item.id === selectedSubjectId)}
             />}
             {currentPage === HOMEWORKS_ROUTE &&
-                <div>
-                    <div className='homework-page-title'>Домашние задания</div>
-                    {subjectsList.map(renderHomeworksPage)}
-                </div>
-                }
+            <HomeworkPage 
+                subjectsList={studentData.subjects}
+            />
+            }
+            {currentPage === MARKS_PROGRESS_ROUTE &&
+            <MarksProgressPage 
+                subjectsList={studentData.subjects}
+            />
+            }
         </div>
     );
 }
