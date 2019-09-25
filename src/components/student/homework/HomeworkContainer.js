@@ -1,4 +1,3 @@
-// @flow
 import React, { useState } from 'react';
 import HomeworkCard from './HomeworkCard';
 import 'styles/student/HomeworkContainer.scss';
@@ -19,19 +18,11 @@ function HomeworkContainer({
         toggleHomeworkCardModal();
     }
 
-    function foo(x: ?number): string {
-        if (x) {
-          return x;
-        }
-        return "default string";
-      }
-
     function toggleHomeworkCardModal() {
         setHomeworkModalIsOpen(!homeworkModalIsOpen);
     }
 
     function renderHomeworkCard(item) {
-        foo('2');
         return (
             <HomeworkCard
                 key={item.id}
