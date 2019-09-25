@@ -1,5 +1,4 @@
 import React from 'react';
-import {getCardColor} from 'sources/utils';
 import 'styles/HomeworkCard.scss';
 import { statusesDisplay } from 'sources/constants/statuses';
 
@@ -14,9 +13,6 @@ function HomeworkCard({
     return (
         <div 
             className='homework card-border'
-            // style={{
-            //     background: getCardColor()
-            // }}
             onClick={() => handleHomeworkCardClick(id)}
         >
             <div className='card'>
