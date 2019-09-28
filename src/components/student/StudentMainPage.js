@@ -16,7 +16,7 @@ import { getStudentDataFetch } from 'sources/API';
 import { testStudentData } from 'sources/test_data.js';
 
 function StudentMainPage() {
-    const [currentPage, setCurrentPage] = useState(HOMEWORKS_ROUTE);
+    const [currentPage, setCurrentPage] = useState(MARKS_PROGRESS_ROUTE);
     const [selectedSubjectId, setSelectedSubjectId] = useState(null);
     
     const [studentData, setStudentData] = useState(testStudentData);

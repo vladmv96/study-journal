@@ -1,7 +1,7 @@
 function getHomeworkStatusColor(homeworkStatus) {
     switch (homeworkStatus) {
         case 'no_done':
-            return '250, 207, 207';
+            return '246, 141, 141';
         case 'done':
             return '151,247,168';
         case 'in_progress':

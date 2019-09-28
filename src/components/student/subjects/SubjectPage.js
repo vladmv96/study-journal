@@ -1,5 +1,6 @@
 import React from 'react';
 import HomeworkContainer from '../homework/HomeworkContainer';
+import 'styles/student/SubjectPage.scss';
 
 function SubjectPage({
     subjectId,
@@ -8,13 +9,12 @@ function SubjectPage({
 
     return (
         <div className='subjectPage'>
-            <h1>{subject.subjectTitle}</h1>
+            <div className='subjectTitle'>{subject.subjectTitle}</div>
             <h2>Id: {subjectId}</h2>
             {subject.homework &&
                 <HomeworkContainer
                     subjectHomeworksList={subject.homework}
                     teacherName={subject.teacherName}
-                    subjectTitle={subject.subjectTitle}
                 />
             }
             <h2>Успеваемость</h2>

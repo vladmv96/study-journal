@@ -29,30 +29,30 @@
         &:hover {
             background-color:rgba(255, 255, 255, 0.75);
         }
+
+        .tasks {
+            margin-left: 5px;
+            margin-top: 1vh;
+            margin-bottom: 1vh;
+        }
+    
+        .deadline-date {
+            min-width: 70px;
+            font-size: 0.8em;
+            margin-top: auto;
+            margin-bottom: auto;
+            text-align: center;
+        }
+    
+        .status {
+            min-width: 70px;
+            font-size: 0.7em;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
     
     }
 
-
-    .card-tasks {
-        margin-left: 5px;
-        margin-top: auto;
-        margin-bottom: auto;
-    }
-
-    .card-deadline-date {
-        min-width: 70px;
-        font-size: 0.8em;
-        margin-top: auto;
-        margin-bottom: auto;
-        text-align: center;
-    }
-
-    .card-status {
-        min-width: 70px;
-        font-size: 0.7em;
-        margin-top: auto;
-        margin-bottom: auto;
-    }
 }
 
 .night .homework {

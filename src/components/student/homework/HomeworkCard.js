@@ -1,5 +1,5 @@
 import React from 'react';
-import {getCardColor} from 'sources/utils';
+import {getHomeworkStatusColor} from 'sources/utils';
 import 'styles/HomeworkCard.scss';
 import { statusesDisplay } from 'sources/constants/statuses';
 
@@ -20,13 +20,16 @@ function HomeworkCard({
             onClick={() => handleHomeworkCardClick(id)}
         >
             <div className='card'>
-                <div className='card-tasks'>
+                <div className='tasks'>
                     {tasks}
                 </div>
-                <div className='card-deadline-date'>
+                <div className='deadline-date'>
                     {deadlineDate}
                 </div>
-                <div className='card-status'>
+                <div className='status'
+                style={{
+                    color: `rgb(${getHomeworkStatusColor(status)})`
+                }}>
                     {statusesDisplay[status] || status}
                 </div>
             </div>

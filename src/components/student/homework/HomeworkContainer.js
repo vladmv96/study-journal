@@ -29,7 +29,7 @@ function HomeworkContainer({
                 id={item.id}
                 tasks={item.tasks}
                 deadlineDate={item.deadlineDate}
-                status={item.status}
+                status={item.cardStatus}
                 handleHomeworkCardClick={handleHomeworkCardClick}
             />
         )
@@ -39,8 +39,8 @@ function HomeworkContainer({
             className='homework-container'
         >
             <div>
-                <div className='homework-container-title'>{subjectTitle || 'Домашнее задание'}</div>
-                <div className='homework-container-cards'>
+                <div className='title'>{subjectTitle || 'Домашнее задание'}</div>
+                <div className='cards'>
                     {subjectHomeworksList && subjectHomeworksList.map(renderHomeworkCard)}
                 </div>
             </div>
