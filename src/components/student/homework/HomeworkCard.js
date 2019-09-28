@@ -14,9 +14,6 @@ function HomeworkCard({
     return (
         <div 
             className='homework card-border'
-            // style={{
-            //     background: getCardColor()
-            // }}
             onClick={() => handleHomeworkCardClick(id)}
         >
             <div className='card'>

@@ -12,16 +12,6 @@ function getHomeworkStatusColor(homeworkStatus) {
     }
 }
 
-function getCardColor(subjectName) {
-    switch (subjectName) {
-        case 'Математика':
-            return 'linear-gradient(45deg, #F1F9D3, #97F7F5)';
-        default:
-            return 'linear-gradient(45deg, #F1F9D3, #97F7F5)';
-    }
-}
-
 export {
-    getHomeworkStatusColor,
-    getCardColor
+    getHomeworkStatusColor
 }
