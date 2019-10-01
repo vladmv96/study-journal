@@ -16,6 +16,8 @@
 
         &:hover {
             transform: scale(1.04);
+            // animation: 0.5s ease-out 0s 1 gradientChanger;
+            // background: linear-gradient(45deg, rgb(151,247,245), rgb(241,249,211));
         }
         &:active {
             transform: scale(0.95);
@@ -37,9 +39,9 @@
         cursor: pointer;
         user-select: none;
 
-        &:hover {
-            background-color:rgba(255, 255, 255, 0.7);
-        }
+        // &:hover {
+        //     background-color:rgba(255, 255, 255, 0.7);
+        // }
         &:active {
             filter: none;
         }
@@ -80,5 +82,113 @@
         &:hover {
             background-color: rgba(47, 66, 93, 0.8);
         }
+    }
+}
+
+// @keyframes gradientChanger {
+//     0% {
+//         background: linear-gradient(45deg, rgb(241,249,211), rgb(151,247,245));
+//     }
+//     10% {
+//         background: linear-gradient(63deg,  rgb(241,249,211), rgb(151,247,245));
+//     }
+//     20% {
+//         background: linear-gradient(81deg,  rgb(241,249,211), rgb(151,247,245));
+//     }
+//     30% {
+//         background: linear-gradient(99deg,  rgb(241,249,211), rgb(151,247,245));
+//     }
+//     40% {
+//         background: linear-gradient(117deg,  rgb(241,249,211), rgb(151,247,245));
+//     }
+//     50% {
+//         background: linear-gradient(135deg,  rgb(241,249,211), rgb(151,247,245));
+//     }
+//     60% {
+//         background: linear-gradient(153deg,  rgb(241,249,211), rgb(151,247,245));
+//     }
+//     70% {
+//         background: linear-gradient(171deg, rgb(241,249,211), rgb(151,247,245));
+//     }
+//     80% {
+//         background: linear-gradient(189deg,  rgb(241,249,211), rgb(151,247,245));
+//     }
+//     90% {
+//         background: linear-gradient(207deg,  rgb(241,249,211), rgb(151,247,245));
+//     }
+//     100% {
+//         background: linear-gradient(225deg,  rgb(241,249,211), rgb(151,247,245));
+//     }
+// }
+@keyframes gradientChangerOut {
+    0% {
+        background: linear-gradient(45deg, rgb(151,247,245), rgb(241,249,211));
+    }
+    10% {
+        background: linear-gradient(45deg, rgb(160,247,242), rgb(232,249,214));
+    }
+    20% {
+        background: linear-gradient(45deg, rgb(169,247,238), rgb(223,249,218));
+    }
+    30% {
+        background: linear-gradient(45deg, rgb(178,248,235), rgb(214,248,221));
+    }
+    40% {
+        background: linear-gradient(45deg, rgb(187,248,231), rgb(205,248,225));
+    }
+    50% {
+        background: linear-gradient(45deg, rgb(196,248,228), rgb(196,248,228));
+    }
+    60% {
+        background: linear-gradient(45deg, rgb(205,248,225), rgb(187,248,231));
+    }
+    70% {
+        background: linear-gradient(45deg, rgb(214,248,221), rgb(178,248,235));
+    }
+    80% {
+        background: linear-gradient(45deg, rgb(223,249,218), rgb(169,247,238));
+    }
+    90% {
+        background: linear-gradient(45deg, rgb(232,249,214), rgb(160,247,242));
+    }
+    100% {
+        background: linear-gradient(45deg, rgb(151,247,245), rgb(241,249,211));
+    }
+}
+
+
+@keyframes gradientChanger {
+    0% {
+        background: linear-gradient(45deg, rgb(241,249,211), rgb(151,247,245));
+    }
+    10% {
+        background: linear-gradient(45deg, rgb(232,249,214), rgb(160,247,242));
+    }
+    20% {
+        background: linear-gradient(45deg, rgb(223,249,218), rgb(169,247,238));
+    }
+    30% {
+        background: linear-gradient(45deg, rgb(214,248,221), rgb(178,248,235));
+    }
+    40% {
+        background: linear-gradient(45deg, rgb(205,248,225), rgb(187,248,231));
+    }
+    50% {
+        background: linear-gradient(45deg, rgb(196,248,228), rgb(196,248,228));
+    }
+    60% {
+        background: linear-gradient(45deg, rgb(187,248,231), rgb(205,248,225));
+    }
+    70% {
+        background: linear-gradient(45deg, rgb(178,248,235), rgb(214,248,221));
+    }
+    80% {
+        background: linear-gradient(45deg, rgb(169,247,238), rgb(223,249,218));
+    }
+    90% {
+        background: linear-gradient(45deg, rgb(160,247,242), rgb(232,249,214));
+    }
+    100% {
+        background: linear-gradient(45deg, rgb(151,247,245), rgb(241,249,211));
     }
 }

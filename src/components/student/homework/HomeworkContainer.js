@@ -29,7 +29,7 @@ function HomeworkContainer({
                 id={item.id}
                 tasks={item.tasks}
                 deadlineDate={item.deadlineDate}
-                status={item.cardStatus}
+                status={item.status}
                 handleHomeworkCardClick={handleHomeworkCardClick}
             />
         )
